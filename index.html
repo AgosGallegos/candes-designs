@@ -8,40 +8,97 @@
 
     <title>Cande's Designs</title>
 
-    <meta name="description"
-        content="Cande's Designs - Diseño, fotografía, contenido audiovisual y comunicación visual.">
+    <meta name="description" content="Cande's Designs - Diseño, fotografía, contenido audiovisual y comunicación visual.">
 
     <style>
+        /* ================================
+           CONFIGURACIÓN GENERAL
+        ================================= */
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        html,
-        body {
-            width: 100%;
-            min-height: 100%;
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #111;
+            background-color: #fff7ef;
+            color: #111111;
         }
 
-        /* PORTADA */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-        .portada {
+
+        /* ================================
+           NAVEGACIÓN
+        ================================= */
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: 100dvh;
-            min-height: 600px;
+            z-index: 10;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 25px 6%;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .menu a {
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            opacity: 0.7;
+        }
+
+        .contacto-menu {
+            background-color: #1464ff;
+            padding: 12px 22px;
+            border-radius: 30px;
+        }
+
+
+        /* ================================
+           PORTADA
+        ================================= */
+
+        .hero {
+            min-height: 100vh;
 
             background-image:
                 linear-gradient(
-                    rgba(0, 0, 0, 0.20),
-                    rgba(0, 0, 0, 0.20)
+                    rgba(0, 0, 0, 0.25),
+                    rgba(0, 0, 0, 0.25)
                 ),
-                url("portada.jpg");
+                url("portada%20%282%29.jpg");
 
             background-size: cover;
             background-position: center;
@@ -51,190 +108,417 @@
             align-items: center;
             justify-content: center;
 
-            position: relative;
-        }
-
-        /* CONTENIDO DE LA PORTADA */
-
-        .contenido-portada {
             text-align: center;
+
+            padding: 100px 20px 60px;
+        }
+
+        .hero-contenido {
+            max-width: 850px;
             color: white;
-            padding: 20px;
-            max-width: 900px;
         }
 
-        .contenido-portada h1 {
-            font-size: clamp(2.8rem, 8vw, 7rem);
-            font-weight: 700;
-            letter-spacing: -2px;
-            margin-bottom: 15px;
-
-            text-shadow:
-                0 3px 15px rgba(0, 0, 0, 0.35);
+        .hero-contenido p {
+            font-size: 14px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
         }
 
-        .contenido-portada p {
-            font-size: clamp(1rem, 2vw, 1.4rem);
-            letter-spacing: 2px;
-            margin-bottom: 35px;
-
-            text-shadow:
-                0 2px 10px rgba(0, 0, 0, 0.4);
+        .hero-contenido h1 {
+            font-size: clamp(48px, 8vw, 100px);
+            line-height: 0.95;
+            margin-bottom: 25px;
         }
 
-        /* BOTÓN */
+        .hero-contenido h1 span {
+            color: #1464ff;
+        }
+
+        .hero-contenido .descripcion {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 650px;
+            margin: 0 auto 35px;
+        }
 
         .boton {
             display: inline-block;
 
-            padding: 15px 30px;
+            background-color: #1464ff;
+            color: white;
 
-            background: white;
-            color: #111;
+            padding: 15px 28px;
+            border-radius: 30px;
 
-            text-decoration: none;
-
-            border-radius: 50px;
-
-            font-size: 1rem;
+            font-size: 15px;
             font-weight: 600;
 
-            transition: 0.3s ease;
+            transition: 0.3s;
         }
 
         .boton:hover {
             transform: translateY(-3px);
-            background: #1769ff;
+            background-color: #0d54db;
+        }
+
+
+        /* ================================
+           SECCIÓN INTRODUCCIÓN
+        ================================= */
+
+        .intro {
+            padding: 100px 8%;
+            text-align: center;
+        }
+
+        .intro small {
+            color: #1464ff;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .intro h2 {
+            font-size: clamp(32px, 5vw, 55px);
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .intro p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.7;
+            color: #555;
+            font-size: 17px;
+        }
+
+
+        /* ================================
+           TARJETAS DE SECCIONES
+        ================================= */
+
+        .secciones {
+            padding: 20px 8% 100px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .tarjeta {
+            background-color: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+
+            border: 1px solid #eeeeee;
+
+            transition: 0.3s;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-5px);
+        }
+
+        .tarjeta h3 {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .tarjeta p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .tarjeta a {
+            color: #1464ff;
+            font-weight: bold;
+        }
+
+
+        /* ================================
+           FOOTER
+        ================================= */
+
+        footer {
+            background-color: #111111;
             color: white;
+            text-align: center;
+
+            padding: 40px 20px;
         }
 
-        /* MENÚ */
-
-        .menu {
-            position: absolute;
-
-            top: 25px;
-            left: 0;
-
-            width: 100%;
-
-            display: flex;
-            justify-content: center;
-
-            padding: 0 20px;
-
-            z-index: 10;
-        }
-
-        .menu ul {
-            list-style: none;
-
-            display: flex;
-            gap: 30px;
-        }
-
-        .menu a {
-            color: white;
-            text-decoration: none;
-
-            font-size: 0.95rem;
-            font-weight: 600;
-
-            text-shadow:
-                0 2px 8px rgba(0, 0, 0, 0.5);
-
-            transition: 0.3s ease;
-        }
-
-        .menu a:hover {
+        footer p {
+            font-size: 14px;
             opacity: 0.7;
         }
 
-        /* CELULAR */
 
-        @media (max-width: 600px) {
+        /* ================================
+           CELULAR
+        ================================= */
 
-            .portada {
-                min-height: 100dvh;
+        @media (max-width: 768px) {
 
-                background-position: center center;
+            header {
+                position: absolute;
+                padding: 20px;
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            .logo {
+                font-size: 21px;
             }
 
             .menu {
-                top: 20px;
-            }
-
-            .menu ul {
-                gap: 16px;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
             .menu a {
-                font-size: 0.78rem;
+                font-size: 13px;
             }
 
-            .contenido-portada {
-                width: 100%;
-                padding: 25px;
+            .contacto-menu {
+                padding: 9px 15px;
             }
 
-            .contenido-portada h1 {
-                font-size: clamp(2.5rem, 12vw, 4rem);
-                letter-spacing: -1px;
+            .hero {
+                min-height: 100svh;
+                padding: 150px 20px 60px;
+
+                background-position: center;
             }
 
-            .contenido-portada p {
-                font-size: 0.9rem;
-                letter-spacing: 1px;
-                line-height: 1.5;
+            .hero-contenido p {
+                font-size: 11px;
+                letter-spacing: 2px;
             }
 
-            .boton {
-                padding: 13px 25px;
-                font-size: 0.9rem;
+            .hero-contenido h1 {
+                font-size: 50px;
+            }
+
+            .hero-contenido .descripcion {
+                font-size: 15px;
+            }
+
+            .intro {
+                padding: 70px 25px;
+            }
+
+            .intro h2 {
+                font-size: 34px;
+            }
+
+            .intro p {
+                font-size: 15px;
+            }
+
+            .secciones {
+                grid-template-columns: 1fr;
+                padding: 10px 25px 70px;
+            }
+
+            .tarjeta {
+                padding: 30px 25px;
             }
         }
+
+
+        /* ================================
+           CELULARES MUY PEQUEÑOS
+        ================================= */
+
+        @media (max-width: 400px) {
+
+            .menu {
+                gap: 10px;
+            }
+
+            .menu a {
+                font-size: 12px;
+            }
+
+            .hero-contenido h1 {
+                font-size: 43px;
+            }
+        }
+
     </style>
 </head>
 
+
 <body>
 
-    <main class="portada">
+
+    <!-- ================================
+         MENÚ
+    ================================= -->
+
+    <header>
+
+        <a href="index.html" class="logo">
+            Cande's Designs ✦
+        </a>
 
         <nav class="menu">
-            <ul>
-                <li>
-                    <a href="index.html">Inicio</a>
-                </li>
 
-                <li>
-                    <a href="sobre-mi.html">Sobre mí</a>
-                </li>
-
-                <li>
-                    <a href="portfolio.html">Portfolio</a>
-                </li>
-
-                <li>
-                    <a href="contacto.html">Contacto</a>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="contenido-portada">
-
-            <h1>Cande's Designs</h1>
-
-            <p>
-                Diseño · Fotografía · Comunicación visual
-            </p>
-
-            <a href="sobre-mi.html" class="boton">
-                Conoceme
+            <a href="index.html">
+                Inicio
             </a>
 
-        </div>
+            <a href="sobre-mi.html">
+                Sobre mí
+            </a>
+
+            <a href="portfolio.html">
+                Portfolio
+            </a>
+
+            <a href="contacto.html" class="contacto-menu">
+                Contacto
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================================
+         PORTADA
+    ================================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-contenido">
+
+                <p>
+                    Diseño · Fotografía · Comunicación visual
+                </p>
+
+                <h1>
+                    Cande's <span>Designs.</span>
+                </h1>
+
+                <p class="descripcion">
+                    Creo contenido visual con identidad,
+                    creatividad y propósito para marcas y proyectos.
+                </p>
+
+                <a href="portfolio.html" class="boton">
+                    Ver portfolio
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             INTRODUCCIÓN
+        ================================= -->
+
+        <section class="intro">
+
+            <small>
+                CREATIVIDAD CON IDENTIDAD
+            </small>
+
+            <h2>
+                Ideas que se convierten en imágenes.
+            </h2>
+
+            <p>
+                Diseño piezas visuales, fotografías y contenido
+                audiovisual pensados para comunicar ideas,
+                contar historias y darle identidad a cada proyecto.
+            </p>
+
+        </section>
+
+
+        <!-- ================================
+             ACCESO A LAS SECCIONES
+        ================================= -->
+
+        <section class="secciones">
+
+            <article class="tarjeta">
+
+                <h3>
+                    Sobre mí
+                </h3>
+
+                <p>
+                    Conocé quién está detrás de Cande's Designs,
+                    mi forma de trabajar y mi manera de entender
+                    la comunicación visual.
+                </p>
+
+                <a href="sobre-mi.html">
+                    Conoceme →
+                </a>
+
+            </article>
+
+
+            <article class="tarjeta">
+
+                <h3>
+                    Portfolio
+                </h3>
+
+                <p>
+                    Explorá algunos de mis trabajos de diseño,
+                    fotografía, contenido audiovisual y redes sociales.
+                </p>
+
+                <a href="portfolio.html">
+                    Ver trabajos →
+                </a>
+
+            </article>
+
+
+            <article class="tarjeta">
+
+                <h3>
+                    Contacto
+                </h3>
+
+                <p>
+                    ¿Tenés un proyecto en mente?
+                    Escribime y podemos empezar a darle forma a tu idea.
+                </p>
+
+                <a href="contacto.html">
+                    Contactarme →
+                </a>
+
+            </article>
+
+        </section>
 
     </main>
+
+
+    <!-- ================================
+         FOOTER
+    ================================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Cande's Designs · Todos los derechos reservados.
+        </p>
+
+    </footer>
+
 
 </body>
 
