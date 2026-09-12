@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-
-/* =========================================
-   GENERAL
-========================================= */
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
 
 * {
     margin: 0;
@@ -15,23 +13,17 @@ html {
 }
 
 body {
-    font-family: 'Inter', Arial, sans-serif;
-    background: #f7f2e9;
-    color: #111111;
-    overflow-x: hidden;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f1e8;
+    color: #151515;
 }
 
 
-/* =========================================
-   NAVEGACIÓN
-========================================= */
+/* =========================
+   NAVBAR
+========================= */
 
-.header {
+.navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -45,185 +37,136 @@ a {
 
     padding: 0 7%;
 
-    background: rgba(10, 10, 10, 0.78);
-
-    backdrop-filter: blur(8px);
+    background: #f7f1e8;
 
     z-index: 1000;
 }
 
 .logo {
-    color: #1267ff;
+    text-decoration: none;
+    color: #1468f5;
 
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 800;
-
-    letter-spacing: -1px;
 }
 
-.menu {
+.navbar nav {
     display: flex;
     align-items: center;
-
-    gap: 42px;
+    gap: 45px;
 }
 
-.menu a {
-    color: white;
+.navbar nav a {
+    text-decoration: none;
+    color: #151515;
 
-    font-size: 16px;
-    font-weight: 700;
-
-    transition: 0.3s ease;
+    font-size: 17px;
+    font-weight: 600;
 }
 
-.menu a:hover {
-    color: #1267ff;
-}
-
-
-/* =========================================
-   TODAS LAS SECCIONES
-========================================= */
-
-.seccion {
-    min-height: 100vh;
-    width: 100%;
+.navbar nav a:hover {
+    color: #1468f5;
 }
 
 
-/* =========================================
+/* BOTÓN CONTACTO */
+
+.btn-contacto {
+    background: #1468f5 !important;
+    color: white !important;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+}
+
+
+/* =========================
    INICIO
-========================================= */
+========================= */
 
 .hero {
-    min-height: 100vh;
-
-    width: 100%;
-
     position: relative;
 
+    min-height: 100vh;
+
+    padding-top: 90px;
+
     display: flex;
-    align-items: center;
 
     overflow: hidden;
 
-    /*
-       FOTO DE PORTADA
-    */
-
-    background-image:
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.62) 0%,
-            rgba(0, 0, 0, 0.42) 42%,
-            rgba(0, 0, 0, 0.08) 75%,
-            rgba(0, 0, 0, 0.20) 100%
-        ),
-        url("portada%20%282%29.jpg");
-
-    background-size: cover;
-
-    /*
-       La movemos un poco hacia la derecha
-       para mostrar mejor a Cande.
-    */
-
-    background-position: center center;
-
-    background-repeat: no-repeat;
+    background: #f7f1e8;
 }
 
 
-/* =========================================
-   CONTENIDO DEL HERO
-========================================= */
+/* =========================
+   TEXTO IZQUIERDO
+========================= */
 
-.hero-contenido {
+.hero-text {
+    width: 52%;
+
+    padding-left: 15.5%;
+    padding-top: 12%;
+
     position: relative;
-
-    z-index: 2;
-
-    width: 100%;
-
-    max-width: 1250px;
-
-    margin: 0 auto;
-
-    padding: 120px 7% 80px;
+    z-index: 5;
 }
 
+.categoria {
+    font-size: 16px;
 
-/* Texto pequeño */
+    letter-spacing: 2px;
 
-.hero-subtitulo {
-    color: white;
+    line-height: 1.6;
 
-    font-size: 14px;
+    margin-bottom: 35px;
 
-    font-weight: 600;
-
-    letter-spacing: 5px;
-
-    margin-bottom: 30px;
+    font-weight: 500;
 }
-
-
-/* TÍTULO */
 
 .hero h1 {
-    color: white;
-
-    font-size: clamp(70px, 8vw, 120px);
+    font-size: clamp(70px, 7vw, 115px);
 
     line-height: 0.88;
 
+    letter-spacing: -5px;
+
     font-weight: 900;
 
-    letter-spacing: -6px;
-
-    max-width: 850px;
-
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 }
 
-
-/*
-   La palabra Designs tendrá azul.
-*/
-
-.hero h1::first-line {
-    color: white;
+.hero h1 span {
+    color: #1468f5;
 }
 
-
-/* Texto */
-
-.hero-texto {
-    color: white;
-
-    max-width: 570px;
+.descripcion {
+    max-width: 480px;
 
     font-size: 18px;
 
     line-height: 1.6;
 
-    margin-bottom: 38px;
+    margin-bottom: 35px;
+
+    color: #333;
 }
 
 
-/* =========================================
-   BOTÓN
-========================================= */
+/* =========================
+   BOTÓN TRABAJO
+========================= */
 
-.boton {
-    display: inline-flex;
+.btn-trabajo {
+    display: inline-block;
 
-    align-items: center;
-
-    background: #1267ff;
+    text-decoration: none;
 
     color: white;
+
+    background: #1468f5;
 
     padding: 16px 28px;
 
@@ -233,232 +176,118 @@ a {
 
     font-weight: 700;
 
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
-.boton::after {
-    content: "→";
-
-    font-size: 20px;
-
-    margin-left: 12px;
-}
-
-.boton:hover {
-    background: #0755dc;
-
+.btn-trabajo:hover {
     transform: translateY(-3px);
+
+    background: #0957d9;
 }
 
 
-/* =========================================
-   SOBRE MÍ
-========================================= */
+/* =========================
+   FOTO
+========================= */
 
-.sobre-mi {
-    min-height: 100vh;
+.hero-image {
+    position: absolute;
 
-    background: #f7f2e9;
+    top: 0;
+    right: 0;
+
+    width: 48%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+
+    display: block;
+}
+
+
+/* =========================
+   INDICADORES
+========================= */
+
+.indicadores {
+    position: absolute;
+
+    bottom: 35px;
+    left: 9%;
 
     display: flex;
 
-    align-items: center;
-}
-
-.contenedor {
-    width: 100%;
-
-    max-width: 1150px;
-
-    margin: 0 auto;
-}
-
-.etiqueta {
-    color: #1267ff;
+    gap: 28px;
 
     font-size: 14px;
 
     font-weight: 700;
 
-    letter-spacing: 4px;
-
-    margin-bottom: 20px;
+    z-index: 10;
 }
 
-.sobre-mi h2 {
-    max-width: 850px;
+.indicadores span {
+    opacity: 0.5;
+}
 
-    font-size: clamp(45px, 6vw, 80px);
+.indicadores .activo {
+    opacity: 1;
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+.pagina {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 15%;
+
+    background: #f7f1e8;
+}
+
+.contenido-pagina {
+    max-width: 650px;
+}
+
+.contenido-pagina h2 {
+    font-size: 80px;
 
     line-height: 0.95;
 
-    font-weight: 900;
-
-    letter-spacing: -4px;
-
-    margin-bottom: 50px;
-}
-
-.sobre-mi-contenido {
-    max-width: 700px;
-}
-
-.sobre-mi-texto p {
-    font-size: 18px;
-
-    line-height: 1.7;
-
-    margin-bottom: 20px;
-}
-
-
-/* =========================================
-   PORTFOLIO
-========================================= */
-
-.portfolio {
-    min-height: 100vh;
-
-    background: #111111;
-
-    color: white;
-
-    padding: 120px 7%;
-}
-
-.portfolio h2 {
-    font-size: clamp(50px, 6vw, 85px);
-
-    line-height: 0.95;
+    margin-bottom: 35px;
 
     font-weight: 900;
-
-    letter-spacing: -4px;
-
-    margin-bottom: 20px;
 }
 
-.descripcion-seccion {
-    font-size: 18px;
-
-    opacity: 0.75;
-
-    margin-bottom: 50px;
-}
-
-
-/* Grilla */
-
-.portfolio-grid {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 25px;
-}
-
-.proyecto {
-    background: #1d1d1d;
-
-    border-radius: 12px;
-
-    overflow: hidden;
-}
-
-.proyecto-imagen {
-    width: 100%;
-
-    height: 260px;
-
-    background: #292929;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-}
-
-.imagen-placeholder {
-    color: #777;
-
-    font-size: 18px;
-}
-
-.proyecto-info {
-    padding: 25px;
-}
-
-.categoria {
-    color: #1267ff;
-
-    font-size: 13px;
-
-    font-weight: 700;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 10px;
-}
-
-.proyecto-info h3 {
-    font-size: 24px;
-
-    margin-bottom: 10px;
-}
-
-.proyecto-info p {
-    line-height: 1.6;
-
-    opacity: 0.75;
-}
-
-
-/* =========================================
-   CONTACTO
-========================================= */
-
-#contacto {
-    min-height: 100vh;
-
-    background: #f7f2e9;
-
-    display: flex;
-
-    align-items: center;
-
-    padding: 120px 7%;
-}
-
-#contacto h2 {
-    font-size: clamp(55px, 7vw, 100px);
-
-    line-height: 0.9;
-
-    font-weight: 900;
-
-    letter-spacing: -5px;
-
-    margin-bottom: 30px;
-}
-
-#contacto p {
+.contenido-pagina p {
     font-size: 19px;
 
     line-height: 1.6;
-
-    max-width: 600px;
 }
 
 
-/* =========================================
+/* =========================
    WHATSAPP
-========================================= */
+========================= */
 
 .whatsapp {
     position: fixed;
 
-    right: 25px;
+    right: 28px;
     bottom: 25px;
 
     width: 48px;
@@ -466,131 +295,105 @@ a {
 
     border-radius: 50%;
 
-    background: #25D366;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    z-index: 2000;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
-
-    transition: 0.3s ease;
-}
-
-.whatsapp:hover {
-    transform: scale(1.1);
-}
-
-
-/* =========================================
-   FOOTER
-========================================= */
-
-footer {
-    background: #111111;
+    background: #25d366;
 
     color: white;
 
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    padding: 25px;
+    text-decoration: none;
+
+    font-size: 22px;
+
+    z-index: 2000;
 }
 
-footer p {
-    font-size: 13px;
 
-    opacity: 0.7;
-}
-
-
-/* =========================================
-   CELULAR
-========================================= */
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width: 900px) {
 
-    .header {
-        padding: 0 5%;
-    }
-
-    .menu {
-        gap: 20px;
-    }
-
-    .menu a {
-        font-size: 14px;
-    }
-
-    .hero {
-        background-position: 58% center;
-    }
-
-    .hero-contenido {
-        padding-left: 7%;
-    }
-
-    .hero h1 {
-        font-size: 75px;
-    }
-
-    .portfolio-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    .header {
-        height: 75px;
-
+    .navbar {
         padding: 0 5%;
     }
 
     .logo {
-        font-size: 21px;
+        font-size: 24px;
     }
 
-    .menu {
-        gap: 12px;
+    .navbar nav {
+        gap: 18px;
     }
 
-    .menu a {
-        font-size: 11px;
+    .navbar nav a {
+        font-size: 14px;
     }
 
-    .hero {
-        background-position: 62% center;
-    }
+    .hero-text {
+        width: 55%;
 
-    .hero-contenido {
-        padding: 120px 7% 70px;
-    }
-
-    .hero-subtitulo {
-        font-size: 10px;
-
-        letter-spacing: 3px;
+        padding-left: 8%;
+        padding-top: 18%;
     }
 
     .hero h1 {
-        font-size: 58px;
-
-        letter-spacing: -3px;
+        font-size: 65px;
     }
 
-    .hero-texto {
-        font-size: 16px;
+    .hero-image {
+        width: 45%;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .navbar {
+        height: 75px;
     }
 
-    .portfolio-grid {
-        grid-template-columns: 1fr;
+    .navbar nav {
+        display: none;
     }
 
-    #contacto h2 {
-        font-size: 55px;
+    .hero {
+        min-height: 100vh;
+
+        display: block;
     }
+
+    .hero-image {
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+
+        opacity: 0.25;
+    }
+
+    .hero-text {
+        width: 100%;
+
+        padding: 150px 30px 100px;
+
+        position: relative;
+        z-index: 10;
+    }
+
+    .hero h1 {
+        font-size: 70px;
+    }
+
+    .descripcion {
+        max-width: 400px;
+    }
+
+    .indicadores {
+        left: 30px;
+    }
+
 }
