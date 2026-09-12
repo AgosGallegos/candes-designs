@@ -1,14 +1,6 @@
-/* =========================================
-   CANDE'S DESIGNS
-   IDENTIDAD VISUAL
-   ========================================= */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-
-/* =========================================
+/* =====================================================
    CONFIGURACIÓN GENERAL
-   ========================================= */
+===================================================== */
 
 * {
     margin: 0;
@@ -21,9 +13,9 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #fff5ec;
-    color: #111111;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f7f7;
+    color: #171717;
     overflow-x: hidden;
 }
 
@@ -33,337 +25,544 @@ a {
 }
 
 
-/* =========================================
-   NAVEGACIÓN
-   ========================================= */
+/* =====================================================
+   COLORES PRINCIPALES
+===================================================== */
 
-header {
+:root {
+    --azul: #1464ff;
+    --negro: #111111;
+    --blanco: #ffffff;
+    --gris: #f5f5f5;
+    --gris-texto: #666666;
+}
+
+
+/* =====================================================
+   NAVEGACIÓN
+===================================================== */
+
+.header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 80px;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
+    height: 90px;
 
     padding: 0 7%;
 
-    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(0, 0, 0, 0.82);
+
+    backdrop-filter: blur(8px);
+
     z-index: 1000;
 }
 
+
+/* LOGO */
+
 .logo {
-    color: #075efd;
-    font-size: 26px;
-    font-weight: 700;
+    color: var(--azul);
+
+    font-size: 27px;
+    font-weight: 800;
+
     letter-spacing: -1px;
+
+    transition: 0.3s;
 }
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+
+/* MENÚ */
 
 .menu {
     display: flex;
     align-items: center;
-    gap: 35px;
+
+    gap: 38px;
 }
 
 .menu a {
-    color: #fff5ec;
-    font-size: 15px;
-    font-weight: 500;
-    transition: 0.3s ease;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    transition: 0.3s;
 }
 
 .menu a:hover {
-    color: #075efd;
+    color: var(--azul);
 }
 
 
 /* BOTÓN CONTACTO */
 
 .contacto-menu {
-    background-color: #075efd;
-    color: #fff5ec !important;
+    background: var(--azul);
 
-    padding: 10px 20px;
+    padding: 13px 25px;
+
     border-radius: 30px;
 
-    transition: 0.3s ease;
+    transition: 0.3s !important;
 }
 
 .contacto-menu:hover {
-    background-color: #fff5ec;
-    color: #075efd !important;
+    color: white !important;
+
+    transform: translateY(-2px);
+
+    opacity: 0.9;
 }
 
 
-/* =========================================
-   SISTEMA DE "PÁGINAS"
-   ========================================= */
+/* =====================================================
+   PÁGINAS
+===================================================== */
 
-/*
-   Cada sección ocupa toda la pantalla.
-*/
-
-section {
+.pagina {
     min-height: 100vh;
+
     width: 100%;
+
+    padding-top: 90px;
+}
+
+
+/* =====================================================
+   INICIO / HERO
+===================================================== */
+
+.hero {
+    position: relative;
+
+    min-height: 100vh;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    padding: 100px 8% 60px;
-}
+    text-align: center;
 
+    overflow: hidden;
 
-/* =========================================
-   INICIO
-   ========================================= */
-
-#inicio {
-    min-height: 100vh;
-
-    position: relative;
+    /*
+       IMPORTANTE:
+       Usamos la imagen completa como fondo.
+    */
 
     background-image:
         linear-gradient(
-            rgba(0, 0, 0, 0.25),
-            rgba(0, 0, 0, 0.45)
+            rgba(0, 0, 0, 0.30),
+            rgba(0, 0, 0, 0.40)
         ),
-        url("portada%20%282%29.jpg");
+        url("portada%20(2).jpg");
 
     background-size: cover;
 
     /*
-       IMPORTANTE:
-       Cambiamos la posición para intentar
-       mostrar mejor la cara.
+       Movemos la imagen hacia arriba
+       para mostrar mejor la cara.
     */
 
-    background-position: center center;
+    background-position: center 25%;
 
     background-repeat: no-repeat;
-
-    color: #fff5ec;
 }
 
 
-/* CONTENIDO DEL INICIO */
-
-.hero {
-    width: 100%;
-    min-height: calc(100vh - 80px);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    padding: 100px 20px 60px;
-}
+/* CONTENIDO DEL HERO */
 
 .hero-contenido {
+    position: relative;
+
+    z-index: 2;
+
+    width: 90%;
     max-width: 900px;
+
+    color: white;
+
+    margin-top: 40px;
 }
 
-.hero-contenido p {
+
+/* SUBTÍTULO */
+
+.hero-subtitulo {
     font-size: 15px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
 
-    margin-bottom: 25px;
+    letter-spacing: 6px;
+
+    font-weight: 600;
+
+    margin-bottom: 28px;
 }
 
-.hero-contenido h1 {
-    font-size: clamp(55px, 8vw, 110px);
+
+/* TÍTULO */
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 105px);
+
     line-height: 0.95;
 
-    margin-bottom: 30px;
+    font-weight: 800;
 
-    font-weight: 700;
-}
+    letter-spacing: -4px;
 
-.hero-contenido .descripcion {
-    max-width: 700px;
+    margin-bottom: 35px;
 
-    margin: 0 auto 35px;
-
-    font-size: 17px;
-    line-height: 1.8;
-
-    letter-spacing: 0;
-    text-transform: none;
+    color: #fff8ef;
 }
 
 
-/* BOTÓN PRINCIPAL */
+/* TEXTO */
+
+.hero-texto {
+    max-width: 750px;
+
+    margin: 0 auto 40px;
+
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    color: white;
+}
+
+
+/* BOTÓN */
 
 .boton {
     display: inline-block;
 
-    padding: 15px 30px;
+    background: var(--azul);
 
-    background-color: #075efd;
-    color: #fff5ec;
+    color: white;
 
-    border-radius: 30px;
+    padding: 17px 34px;
 
-    font-weight: 600;
+    border-radius: 35px;
 
-    transition: 0.3s ease;
+    font-size: 17px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
 }
 
 .boton:hover {
-    background-color: #fff5ec;
-    color: #075efd;
     transform: translateY(-3px);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 
-/* =========================================
-   SOBRE MÍ
-   ========================================= */
+/* =====================================================
+   SECCIONES GENERALES
+===================================================== */
 
-#sobre-mi {
-    background-color: #fff5ec;
-    color: #111111;
-}
+.seccion {
+    min-height: 100vh;
 
-.sobre-mi-contenido {
-    width: 100%;
-    max-width: 1100px;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    gap: 80px;
+    display: flex;
 
     align-items: center;
+
+    justify-content: center;
+
+    padding: 130px 7% 80px;
+
+    background: white;
 }
 
-.sobre-mi h2 {
-    font-size: clamp(40px, 5vw, 70px);
-    line-height: 1;
-
-    margin-bottom: 25px;
-
-    color: #075efd;
-}
-
-.sobre-mi p {
-    font-size: 17px;
-    line-height: 1.8;
-
-    margin-bottom: 20px;
-}
-
-
-/* =========================================
-   PORTFOLIO
-   ========================================= */
-
-#portfolio {
-    background-color: #111111;
-    color: #fff5ec;
-
-    flex-direction: column;
-}
-
-.portfolio-titulo {
+.contenedor {
     width: 100%;
-    max-width: 1100px;
+
+    max-width: 1150px;
+
+    margin: auto;
+}
+
+
+/* ETIQUETA */
+
+.etiqueta {
+    color: var(--azul);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
+}
+
+
+/* TÍTULOS */
+
+.seccion h2 {
+    font-size: clamp(38px, 5vw, 65px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    max-width: 800px;
+
+    margin-bottom: 30px;
+}
+
+
+/* DESCRIPCIÓN */
+
+.descripcion-seccion {
+    max-width: 650px;
+
+    color: var(--gris-texto);
+
+    font-size: 18px;
+
+    line-height: 1.7;
 
     margin-bottom: 50px;
 }
 
-.portfolio-titulo h2 {
-    font-size: clamp(45px, 6vw, 80px);
-    color: #075efd;
+
+/* =====================================================
+   SOBRE MÍ
+===================================================== */
+
+.sobre-mi {
+    background: #f5f5f5;
 }
 
-.portfolio-titulo p {
-    margin-top: 15px;
-    color: #fff5ec;
-    opacity: 0.8;
+.sobre-mi-contenido {
+    max-width: 850px;
+}
+
+.sobre-mi-texto {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 22px;
+}
+
+.sobre-mi-texto p {
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    color: #444;
 }
 
 
-/* GRILLA */
+/* =====================================================
+   PORTFOLIO
+===================================================== */
+
+.portfolio {
+    background: white;
+}
 
 .portfolio-grid {
-    width: 100%;
-    max-width: 1100px;
-
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
 
-    gap: 20px;
+    gap: 30px;
+
+    margin-top: 30px;
 }
 
-.portfolio-item {
-    position: relative;
+
+/* PROYECTO */
+
+.proyecto {
+    background: #f5f5f5;
+
+    border-radius: 18px;
 
     overflow: hidden;
 
-    min-height: 300px;
-
-    background-color: #fff5ec;
+    transition: 0.3s;
 }
 
-.portfolio-item img {
+.proyecto:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.10);
+}
+
+
+/* IMAGEN DEL PROYECTO */
+
+.proyecto-imagen {
+    height: 260px;
+
+    overflow: hidden;
+}
+
+.imagen-placeholder {
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
+    display: flex;
 
-    display: block;
+    align-items: center;
+    justify-content: center;
 
-    transition: transform 0.5s ease;
+    background: #dedede;
+
+    color: #777;
+
+    font-size: 18px;
+
+    font-weight: 600;
 }
 
-.portfolio-item:hover img {
-    transform: scale(1.05);
+
+/* INFORMACIÓN */
+
+.proyecto-info {
+    padding: 28px;
+}
+
+.categoria {
+    color: var(--azul);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.proyecto-info h3 {
+    font-size: 25px;
+
+    margin-bottom: 12px;
+}
+
+.proyecto-info p:last-child {
+    color: #666;
+
+    line-height: 1.6;
 }
 
 
-/* =========================================
+/* =====================================================
    CONTACTO
-   ========================================= */
+===================================================== */
 
-#contacto {
-    background-color: #075efd;
-    color: #fff5ec;
-}
+.contacto {
+    background: #111111;
 
-.contacto-contenido {
-    width: 100%;
-    max-width: 900px;
+    color: white;
 
     text-align: center;
 }
 
-.contacto-contenido h2 {
-    font-size: clamp(45px, 6vw, 80px);
+.contacto .contenedor {
+    display: flex;
 
-    margin-bottom: 25px;
+    flex-direction: column;
+
+    align-items: center;
 }
 
-.contacto-contenido p {
+.contacto h2 {
+    color: white;
+
+    max-width: 800px;
+}
+
+.contacto .descripcion-seccion {
+    color: #cccccc;
+}
+
+
+/* CONTACTO WHATSAPP */
+
+.contacto-contenido {
+    margin-top: 20px;
+}
+
+.whatsapp-contacto {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    background: white;
+
+    color: #111;
+
+    padding: 18px 28px;
+
+    border-radius: 50px;
+
+    transition: 0.3s;
+
+    text-align: left;
+}
+
+.whatsapp-contacto:hover {
+    transform: translateY(-4px);
+}
+
+.whatsapp-icono {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #25D366;
+
+    color: white;
+
+    border-radius: 50%;
+
     font-size: 18px;
-    line-height: 1.8;
+}
 
-    max-width: 650px;
+.whatsapp-contacto strong {
+    font-size: 16px;
+}
 
-    margin: 0 auto 35px;
+.whatsapp-contacto p {
+    margin-top: 3px;
+
+    font-size: 13px;
+
+    color: #666;
 }
 
 
-/* =========================================
-   BOTÓN WHATSAPP
-   ========================================= */
+/* =====================================================
+   WHATSAPP FLOTANTE
+===================================================== */
 
 .whatsapp-flotante {
     position: fixed;
@@ -371,135 +570,177 @@ section {
     right: 25px;
     bottom: 25px;
 
-    width: 48px;
-    height: 48px;
+    width: 45px;
+    height: 45px;
 
-    background-color: #075efd;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #25D366;
+
+    color: white;
 
     border-radius: 50%;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 18px;
 
     z-index: 2000;
 
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
 
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 .whatsapp-flotante:hover {
     transform: scale(1.1);
-    background-color: #fff5ec;
 }
 
 
-/* =========================================
+/* =====================================================
    FOOTER
-   ========================================= */
+===================================================== */
 
-footer {
-    background-color: #111111;
+.footer {
+    background: #111111;
 
-    color: #fff5ec;
+    color: #777;
 
     text-align: center;
 
-    padding: 25px;
+    padding: 30px 20px;
 
     font-size: 13px;
+
+    line-height: 1.7;
 }
 
 
-/* =========================================
-   RESPONSIVE - TABLET
-   ========================================= */
+/* =====================================================
+   TABLET
+===================================================== */
 
 @media (max-width: 900px) {
 
-    header {
+    .header {
         padding: 0 5%;
     }
 
     .menu {
-        gap: 18px;
+        gap: 20px;
     }
 
     .menu a {
-        font-size: 13px;
-    }
-
-    .sobre-mi-contenido {
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-    }
-
-    .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-
-/* =========================================
-   RESPONSIVE - CELULAR
-   ========================================= */
-
-@media (max-width: 600px) {
-
-    header {
-        height: 70px;
-
-        padding: 0 20px;
-    }
-
-    .logo {
-        font-size: 20px;
-    }
-
-    .menu {
-        gap: 10px;
-    }
-
-    .menu a {
-        font-size: 11px;
-    }
-
-    .contacto-menu {
-        padding: 8px 12px;
-    }
-
-    section {
-        padding: 90px 20px 40px;
-    }
-
-    .hero {
-        min-height: 100vh;
-    }
-
-    .hero-contenido h1 {
-        font-size: 52px;
-    }
-
-    .hero-contenido p {
-        font-size: 11px;
-        letter-spacing: 3px;
-    }
-
-    .hero-contenido .descripcion {
         font-size: 14px;
     }
 
     .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .header {
+        height: 75px;
+
+        padding: 0 5%;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .menu {
+        gap: 12px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .contacto-menu {
+        padding: 9px 14px;
+    }
+
+
+    /* HERO */
+
+    .pagina {
+        padding-top: 75px;
+    }
+
+    .hero {
+        min-height: 100vh;
+
+        background-position: center 20%;
+    }
+
+    .hero-contenido {
+        margin-top: 20px;
+    }
+
+    .hero-subtitulo {
+        font-size: 10px;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 20px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+
+        letter-spacing: -2px;
+    }
+
+    .hero-texto {
+        font-size: 16px;
+
+        line-height: 1.6;
+
+        padding: 0 10px;
+    }
+
+
+    /* SECCIONES */
+
+    .seccion {
+        padding: 110px 6% 60px;
+    }
+
+    .seccion h2 {
+        font-size: 42px;
+    }
+
+    .descripcion-seccion {
+        font-size: 16px;
+    }
+
+
+    /* PORTFOLIO */
+
+    .portfolio-grid {
         grid-template-columns: 1fr;
     }
 
-    .whatsapp-flotante {
-        width: 43px;
-        height: 43px;
 
+    /* WHATSAPP */
+
+    .whatsapp-flotante {
         right: 18px;
+
         bottom: 18px;
+
+        width: 42px;
+        height: 42px;
     }
+
 }
