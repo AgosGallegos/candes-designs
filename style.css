@@ -1,6 +1,6 @@
-/* =====================================================
+/* ==================================================
    CONFIGURACIÓN GENERAL
-===================================================== */
+================================================== */
 
 * {
     margin: 0;
@@ -8,440 +8,252 @@
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
-
-    font-family:
-        "Arial",
-        "Helvetica Neue",
-        Helvetica,
-        sans-serif;
-
-    background: #fff8ef;
-
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f2e9;
     color: #111111;
-
-    overflow-x: hidden;
 }
 
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-
-
-/* =====================================================
+/* ==================================================
    COLORES
-===================================================== */
+================================================== */
 
 :root {
-
-    --azul: #1464f4;
-
+    --azul: #1769ff;
     --negro: #111111;
-
-    --beige: #fff8ef;
-
-    --blanco: #ffffff;
-
-    --gris: #666666;
-
+    --beige: #f7f2e9;
 }
 
 
+/* ==================================================
+   NAVBAR
+================================================== */
 
-/* =====================================================
-   HEADER
-===================================================== */
+.navbar {
+    width: 100%;
+    height: 90px;
 
-.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    position: fixed;
+    padding: 0 7%;
 
+    background: var(--beige);
+
+    position: absolute;
     top: 0;
     left: 0;
 
-    width: 100%;
-
-    height: 90px;
-
-    padding:
-        0
-        7%;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    background: var(--beige);
-
-    z-index: 1000;
-
+    z-index: 100;
 }
 
 
-
-/* =====================================================
-   LOGO
-===================================================== */
+/* LOGO */
 
 .logo {
-
     color: var(--azul);
+    text-decoration: none;
 
     font-size: 30px;
-
     font-weight: 800;
-
     letter-spacing: -1.5px;
-
-    transition: 0.3s ease;
-
 }
 
 
-.logo:hover {
+/* MENÚ */
 
-    opacity: 0.75;
-
-}
-
-
-
-/* =====================================================
-   MENÚ
-===================================================== */
-
-.menu {
-
+.nav-menu {
     display: flex;
-
     align-items: center;
-
-    gap: 38px;
-
+    gap: 42px;
 }
 
-
-.menu a {
-
+.nav-menu a {
     color: var(--negro);
+    text-decoration: none;
 
-    font-size: 16px;
-
+    font-size: 17px;
     font-weight: 600;
 
-    transition: 0.3s ease;
-
+    transition: 0.2s ease;
 }
 
-
-.menu a:hover {
-
+.nav-menu a:hover {
     color: var(--azul);
-
 }
 
 
+/* BOTÓN CONTACTO */
 
-/* =====================================================
-   BOTÓN CONTACTO
-===================================================== */
-
-.contacto-menu {
-
+.nav-menu .contacto-btn {
     background: var(--azul);
+    color: white;
 
-    color: white !important;
+    padding: 15px 27px;
 
-    padding:
-        14px
-        27px;
-
-    border-radius: 30px;
-
-    transition: 0.3s ease;
-
+    border-radius: 40px;
 }
 
-
-.contacto-menu:hover {
-
+.nav-menu .contacto-btn:hover {
+    color: white;
     transform: translateY(-2px);
-
-    opacity: 0.9;
-
 }
 
 
-
-/* =====================================================
-   PÁGINAS
-===================================================== */
-
-/*
-   IMPORTANTE:
-
-   Cada sección funciona como una página independiente.
-   JavaScript muestra solamente la página seleccionada.
-*/
-
-.pagina {
-
-    width: 100%;
-
-    min-height: 100vh;
-
-}
-
-
-
-/* =====================================================
-   INICIO
-===================================================== */
+/* ==================================================
+   HERO / INICIO
+================================================== */
 
 .hero {
-
-    position: relative;
-
+    width: 100%;
     min-height: 100vh;
-
-    padding-top: 90px;
-
-    padding-left: 7%;
-
-    padding-right: 0;
-
-    padding-bottom: 40px;
-
-    background: var(--beige);
 
     display: flex;
 
-    align-items: center;
-
-    justify-content: space-between;
+    position: relative;
 
     overflow: hidden;
 
+    background: var(--beige);
 }
 
 
+/* ==================================================
+   PARTE IZQUIERDA
+================================================== */
 
-/* =====================================================
-   CONTENIDO DEL HERO
-===================================================== */
+.hero-content {
+    width: 52%;
 
-.hero-contenido {
+    min-height: 100vh;
 
-    width: 47%;
+    display: flex;
+    flex-direction: column;
 
-    max-width: 650px;
+    justify-content: center;
 
-    padding-bottom: 25px;
+    padding-left: 15%;
+    padding-right: 5%;
 
     position: relative;
 
-    z-index: 3;
-
+    z-index: 10;
 }
 
 
+/* CATEGORÍA */
 
-/* =====================================================
-   SUBTÍTULO
-===================================================== */
-
-.hero-subtitulo {
-
-    font-size: 16px;
-
-    font-weight: 500;
+.categoria {
+    font-size: 17px;
 
     letter-spacing: 3px;
 
-    line-height: 1.7;
+    line-height: 1.8;
 
-    margin-bottom: 34px;
-
-    color: var(--negro);
-
+    margin-bottom: 42px;
 }
 
 
-
-/* =====================================================
+/* ==================================================
    TÍTULO PRINCIPAL
-===================================================== */
+================================================== */
 
 .hero h1 {
-
-    margin: 0;
-
-    margin-bottom: 35px;
-
-    font-size:
-        clamp(
-            70px,
-            7.5vw,
-            112px
-        );
+    font-size: clamp(75px, 7vw, 115px);
 
     line-height: 0.88;
 
-    font-weight: 800;
+    letter-spacing: -6px;
 
-    letter-spacing: -5px;
+    font-weight: 900;
 
-    color: var(--negro);
-
+    margin-bottom: 42px;
 }
 
 
-
-/* =====================================================
-   "DESIGNS" AZUL
-===================================================== */
+/* SEGUNDA PALABRA AZUL */
 
 .hero h1 span {
+    display: block;
 
     color: var(--azul);
-
 }
 
 
+/* ==================================================
+   DESCRIPCIÓN
+================================================== */
 
-/* =====================================================
-   TEXTO PRINCIPAL
-===================================================== */
+.descripcion {
+    max-width: 520px;
 
-.hero-texto {
+    font-size: 19px;
 
-    max-width: 540px;
+    line-height: 1.55;
 
-    margin-bottom: 38px;
+    color: #333333;
 
-    font-size: 18px;
-
-    line-height: 1.6;
-
-    color: #222222;
-
+    margin-bottom: 35px;
 }
 
 
-
-/* =====================================================
+/* ==================================================
    BOTÓN VER MI TRABAJO
-===================================================== */
+================================================== */
 
-.boton {
-
+.trabajo-btn {
     display: inline-flex;
 
     align-items: center;
 
-    justify-content: center;
+    gap: 12px;
 
-    padding:
-        16px
-        29px;
+    width: fit-content;
+
+    padding: 17px 28px;
+
+    border-radius: 50px;
 
     background: var(--azul);
 
     color: white;
 
-    border-radius: 30px;
+    text-decoration: none;
 
-    font-size: 16px;
+    font-size: 17px;
 
     font-weight: 700;
 
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-
+    transition: 0.25s ease;
 }
 
-
-.boton:hover {
-
+.trabajo-btn:hover {
     transform: translateY(-3px);
 
-    box-shadow:
-        0
-        10px
-        25px
-        rgba(20, 100, 244, 0.25);
+    box-shadow: 0 10px 25px rgba(23, 105, 255, 0.25);
+}
 
+.trabajo-btn span {
+    font-size: 21px;
 }
 
 
-
-/* =====================================================
-   FOTO DEL HERO
-===================================================== */
-
-.hero-imagen {
-
-    width: 49vw;
-
-    max-width: 720px;
-
-    min-width: 500px;
-
-    aspect-ratio: 1 / 1;
-
-    overflow: hidden;
-
-    position: relative;
-
-    z-index: 2;
-
-}
-
-
-
-/* =====================================================
-   IMAGEN
-===================================================== */
-
-.hero-imagen img {
-
-    width: 100%;
-
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-
-    object-position: center center;
-
-}
-
-
-
-/* =====================================================
+/* ==================================================
    INDICADORES
-===================================================== */
+================================================== */
 
-.hero-indicadores {
-
+.indicadores {
     position: absolute;
 
-    left: 7%;
+    left: 15%;
 
-    bottom: 30px;
+    bottom: 40px;
 
     display: flex;
 
@@ -449,836 +261,445 @@ a {
 
     gap: 25px;
 
+    font-size: 14px;
+}
+
+.indicadores strong {
+    font-weight: 800;
+}
+
+.indicadores span {
+    color: #999999;
+}
+
+
+/* ==================================================
+   FOTO
+================================================== */
+
+.hero-image {
+    width: 48%;
+
+    height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    z-index: 2;
+}
+
+
+/* IMAGEN */
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    /*
+    Esta posición permite que se vea
+    la cara y la cámara.
+    */
+
+    object-position: center center;
+
+    /*
+    Blanco y negro.
+    NO usamos blur.
+    */
+
+    filter: grayscale(100%);
+}
+
+
+/* ==================================================
+   DIFUMINACIÓN / DEGRADADO
+================================================== */
+
+/*
+   ESTE ES EL EFECTO QUE FALTABA.
+
+   La foto queda nítida.
+   Solamente se va mezclando con
+   el fondo beige hacia la izquierda.
+*/
+
+.photo-gradient {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 60%;
+    height: 100%;
+
     z-index: 5;
 
-    font-size: 14px;
+    pointer-events: none;
 
-    font-weight: 600;
+    background: linear-gradient(
+        to right,
 
+        rgba(247, 242, 233, 1) 0%,
+
+        rgba(247, 242, 233, 0.95) 12%,
+
+        rgba(247, 242, 233, 0.75) 28%,
+
+        rgba(247, 242, 233, 0.45) 48%,
+
+        rgba(247, 242, 233, 0.15) 72%,
+
+        rgba(247, 242, 233, 0) 100%
+    );
 }
 
 
-.hero-indicadores span {
+/* ==================================================
+   DETALLE SUAVE SOBRE LA FOTO
+================================================== */
 
-    color: #999999;
+.hero-image::after {
+    content: "";
 
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 4;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.03),
+        rgba(0, 0, 0, 0)
+    );
 }
 
 
-.hero-indicadores .activo {
+/* ==================================================
+   SECCIONES INTERNAS
+================================================== */
 
-    color: var(--negro);
-
-}
-
-
-
-/* =====================================================
-   SECCIONES GENERALES
-===================================================== */
-
-.seccion {
-
+.page-section {
     min-height: 100vh;
 
-    padding:
-        130px
-        7%
-        80px;
+    padding: 130px 10%;
 
     display: flex;
 
     align-items: center;
 
-    justify-content: center;
-
-    background: white;
-
+    background: var(--beige);
 }
 
-
-.contenedor {
-
+.section-inner {
+    max-width: 1100px;
     width: 100%;
-
-    max-width: 1150px;
-
-    margin: 0 auto;
-
 }
 
 
+/* TÍTULOS PEQUEÑOS */
 
-/* =====================================================
-   ETIQUETAS
-===================================================== */
-
-.etiqueta {
-
+.small-title {
     color: var(--azul);
 
-    font-size: 13px;
+    font-size: 15px;
 
-    font-weight: 800;
+    letter-spacing: 3px;
 
-    letter-spacing: 4px;
-
-    margin-bottom: 20px;
-
-}
-
-
-
-/* =====================================================
-   TÍTULOS DE SECCIONES
-===================================================== */
-
-.seccion h2 {
-
-    font-size:
-        clamp(
-            42px,
-            5vw,
-            68px
-        );
-
-    line-height: 1.05;
-
-    letter-spacing: -3px;
-
-    max-width: 850px;
+    font-weight: 700;
 
     margin-bottom: 30px;
-
 }
 
 
+/* TÍTULOS */
 
-/* =====================================================
-   DESCRIPCIÓN
-===================================================== */
+.page-section h2 {
+    font-size: clamp(55px, 7vw, 100px);
 
-.descripcion-seccion {
+    line-height: 0.95;
 
-    max-width: 650px;
+    letter-spacing: -4px;
 
-    color: var(--gris);
-
-    font-size: 18px;
-
-    line-height: 1.7;
-
-    margin-bottom: 45px;
-
+    margin-bottom: 35px;
 }
 
 
+/* TEXTO */
 
-/* =====================================================
-   SOBRE MÍ
-===================================================== */
+.page-section p:not(.small-title) {
+    max-width: 600px;
 
-.sobre-mi {
+    font-size: 20px;
 
-    background: #f5f5f5;
-
+    line-height: 1.6;
 }
 
 
-.sobre-mi-contenido {
-
-    max-width: 850px;
-
-}
-
-
-.sobre-mi-texto {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 22px;
-
-}
-
-
-.sobre-mi-texto p {
-
-    font-size: 19px;
-
-    line-height: 1.8;
-
-    color: #444444;
-
-}
-
-
-
-/* =====================================================
+/* ==================================================
    PORTFOLIO
-===================================================== */
-
-.portfolio {
-
-    background: white;
-
-}
-
+================================================== */
 
 .portfolio-grid {
+    margin-top: 60px;
 
     display: grid;
 
-    grid-template-columns:
-        repeat(
-            3,
-            1fr
-        );
+    grid-template-columns: repeat(3, 1fr);
 
-    gap: 30px;
-
-    margin-top: 35px;
-
+    gap: 20px;
 }
 
+.portfolio-card {
+    min-height: 300px;
 
+    padding: 30px;
 
-/* =====================================================
-   PROYECTOS
-===================================================== */
-
-.proyecto {
-
-    background: #f5f5f5;
-
-    border-radius: 18px;
-
-    overflow: hidden;
-
-    transition: 0.3s ease;
-
-}
-
-
-.proyecto:hover {
-
-    transform: translateY(-7px);
-
-    box-shadow:
-        0
-        15px
-        40px
-        rgba(
-            0,
-            0,
-            0,
-            0.10
-        );
-
-}
-
-
-
-/* =====================================================
-   IMAGEN PROYECTO
-===================================================== */
-
-.proyecto-imagen {
-
-    height: 260px;
-
-    overflow: hidden;
-
-}
-
-
-.imagen-placeholder {
-
-    width: 100%;
-
-    height: 100%;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    background: #dedede;
-
-    color: #777777;
-
-    font-size: 18px;
-
-    font-weight: 600;
-
-}
-
-
-
-/* =====================================================
-   INFORMACIÓN PROYECTO
-===================================================== */
-
-.proyecto-info {
-
-    padding: 28px;
-
-}
-
-
-.categoria {
-
-    color: var(--azul);
-
-    font-size: 13px;
-
-    font-weight: 800;
-
-    text-transform: uppercase;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 12px;
-
-}
-
-
-.proyecto-info h3 {
-
-    font-size: 25px;
-
-    margin-bottom: 12px;
-
-}
-
-
-.proyecto-info p:last-child {
-
-    color: #666666;
-
-    line-height: 1.6;
-
-}
-
-
-
-/* =====================================================
-   CONTACTO
-===================================================== */
-
-.contacto {
-
-    background: #111111;
-
-    color: white;
-
-    text-align: center;
-
-}
-
-
-.contacto .contenedor {
+    background: white;
 
     display: flex;
 
     flex-direction: column;
 
-    align-items: center;
+    justify-content: space-between;
 
+    border: 1px solid #e5dfd4;
+}
+
+.portfolio-card span {
+    color: var(--azul);
+
+    font-weight: 700;
+}
+
+.portfolio-card h3 {
+    font-size: 35px;
+
+    letter-spacing: -1px;
 }
 
 
-.contacto h2 {
+/* ==================================================
+   CONTACTO
+================================================== */
 
-    color: white;
-
+.contacto-section {
+    min-height: 80vh;
 }
 
 
-.contacto .descripcion-seccion {
+/* ==================================================
+   WHATSAPP
+================================================== */
 
-    color: #cccccc;
-
-}
-
-
-
-/* =====================================================
-   WHATSAPP CONTACTO
-===================================================== */
-
-.contacto-contenido {
-
-    margin-top: 20px;
-
-}
-
-
-.whatsapp-contacto {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 18px;
-
-    background: white;
-
-    color: #111111;
-
-    padding:
-        18px
-        30px;
-
-    border-radius: 50px;
-
-    text-align: left;
-
-    transition: 0.3s ease;
-
-}
-
-
-.whatsapp-contacto:hover {
-
-    transform: translateY(-4px);
-
-}
-
-
-.whatsapp-icono {
-
-    width: 45px;
-
-    height: 45px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    background: #25D366;
-
-    color: white;
-
-    border-radius: 50%;
-
-    font-size: 19px;
-
-}
-
-
-.whatsapp-contacto strong {
-
-    font-size: 16px;
-
-}
-
-
-.whatsapp-contacto p {
-
-    margin-top: 3px;
-
-    font-size: 13px;
-
-    color: #666666;
-
-}
-
-
-
-/* =====================================================
-   WHATSAPP FLOTANTE
-===================================================== */
-
-.whatsapp-flotante {
-
+.whatsapp {
     position: fixed;
 
     right: 28px;
-
     bottom: 25px;
 
-    width: 48px;
+    width: 52px;
+    height: 52px;
 
-    height: 48px;
+    border-radius: 50%;
+
+    background: #25D366;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
-    background: #25D366;
+    text-decoration: none;
 
+    z-index: 999;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+
+    transition: 0.2s ease;
+}
+
+.whatsapp span {
     color: white;
 
-    border-radius: 50%;
+    font-size: 22px;
+}
 
-    font-size: 19px;
-
-    z-index: 2000;
-
-    box-shadow:
-        0
-        5px
-        20px
-        rgba(
-            0,
-            0,
-            0,
-            0.20
-        );
-
-    transition: 0.3s ease;
-
+.whatsapp:hover {
+    transform: scale(1.08);
 }
 
 
-.whatsapp-flotante:hover {
+/* ==================================================
+   RESPONSIVE / CELULAR
+================================================== */
 
-    transform: scale(1.1);
+@media (max-width: 900px) {
 
-}
+    .navbar {
+        height: 75px;
 
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-/*
-   Lo dejamos oculto porque querías que cada "página"
-   sea independiente y no aparezca contenido debajo.
-*/
-
-.footer {
-
-    display: none;
-
-}
-
-
-
-/* =====================================================
-   TABLET
-===================================================== */
-
-@media (max-width: 1100px) {
-
-
-    .header {
-
-        padding:
-            0
-            5%;
-
+        padding: 0 6%;
     }
-
-
-    .hero {
-
-        padding-left: 5%;
-
-    }
-
-
-    .hero-imagen {
-
-        width: 47vw;
-
-        min-width: 430px;
-
-    }
-
-
-    .hero-contenido {
-
-        width: 48%;
-
-    }
-
-
-    .portfolio-grid {
-
-        grid-template-columns:
-            repeat(
-                2,
-                1fr
-            );
-
-    }
-
-}
-
-
-
-/* =====================================================
-   TABLET PEQUEÑA
-===================================================== */
-
-@media (max-width: 850px) {
-
-
-    .header {
-
-        height: 80px;
-
-    }
-
 
     .logo {
+        font-size: 23px;
+    }
 
-        font-size: 25px;
+    .nav-menu {
+        gap: 15px;
+    }
 
+    .nav-menu a {
+        font-size: 13px;
+    }
+
+    .nav-menu .contacto-btn {
+        padding: 10px 16px;
     }
 
 
-    .menu {
-
-        gap: 20px;
-
-    }
-
-
-    .menu a {
-
-        font-size: 14px;
-
-    }
-
-
-    .contacto-menu {
-
-        padding:
-            11px
-            20px;
-
-    }
-
+    /* HERO */
 
     .hero {
-
-        min-height: 100vh;
-
-        padding:
-            110px
-            5%
-            70px;
-
         flex-direction: column;
 
+        min-height: auto;
+    }
+
+    .hero-content {
+        width: 100%;
+
+        min-height: 650px;
+
+        padding: 130px 8% 70px;
+
         justify-content: center;
-
-        gap: 45px;
-
     }
 
-
-    .hero-contenido {
-
-        width: 100%;
-
-        max-width: 650px;
-
-        text-align: left;
-
-    }
-
-
-    .hero-imagen {
-
-        width: 70vw;
-
-        min-width: 0;
-
-        max-width: 600px;
-
-    }
-
-
-    .hero-indicadores {
-
-        display: none;
-
-    }
-
-}
-
-
-
-/* =====================================================
-   CELULAR
-===================================================== */
-
-@media (max-width: 600px) {
-
-
-    .header {
-
-        height: 72px;
-
-        padding:
-            0
-            20px;
-
-    }
-
-
-    .logo {
-
-        font-size: 20px;
-
-    }
-
-
-    .menu {
-
-        gap: 10px;
-
-    }
-
-
-    .menu a {
-
-        font-size: 11px;
-
-    }
-
-
-    .contacto-menu {
-
-        padding:
-            8px
-            12px;
-
-    }
-
-
-    .hero {
-
-        padding:
-            100px
-            20px
-            50px;
-
-        gap: 35px;
-
-        align-items: flex-start;
-
-    }
-
-
-    .hero-contenido {
-
-        width: 100%;
-
-    }
-
-
-    .hero-subtitulo {
-
-        font-size: 11px;
+    .categoria {
+        font-size: 13px;
 
         letter-spacing: 2px;
 
-        margin-bottom: 22px;
-
+        margin-bottom: 30px;
     }
-
 
     .hero h1 {
+        font-size: clamp(60px, 16vw, 100px);
 
-        font-size: 58px;
+        letter-spacing: -4px;
+    }
 
-        line-height: 0.9;
+    .descripcion {
+        font-size: 17px;
+    }
 
-        letter-spacing: -3px;
-
-        margin-bottom: 25px;
-
+    .indicadores {
+        left: 8%;
+        bottom: 30px;
     }
 
 
-    .hero-texto {
+    /* FOTO */
 
-        font-size: 15px;
-
-        line-height: 1.6;
-
-        margin-bottom: 28px;
-
-    }
-
-
-    .boton {
-
-        padding:
-            14px
-            23px;
-
-        font-size: 14px;
-
-    }
-
-
-    .hero-imagen {
-
+    .hero-image {
         width: 100%;
 
-        max-width: none;
+        height: 100vw;
 
-        aspect-ratio: 1 / 1;
-
+        max-height: 650px;
     }
 
 
-    .seccion {
+    /*
+    En celular el degradado
+    pasa de abajo hacia arriba.
+    */
 
-        padding:
-            100px
-            20px
-            60px;
+    .photo-gradient {
+        width: 100%;
+        height: 45%;
 
+        top: 0;
+        left: 0;
+
+        background: linear-gradient(
+            to bottom,
+
+            rgba(247, 242, 233, 1) 0%,
+
+            rgba(247, 242, 233, 0.75) 25%,
+
+            rgba(247, 242, 233, 0.25) 65%,
+
+            rgba(247, 242, 233, 0) 100%
+        );
     }
 
 
-    .seccion h2 {
+    /* SECCIONES */
 
-        font-size: 42px;
-
-        letter-spacing: -2px;
-
+    .page-section {
+        padding: 100px 8%;
     }
-
-
-    .descripcion-seccion {
-
-        font-size: 16px;
-
-    }
-
 
     .portfolio-grid {
-
         grid-template-columns: 1fr;
-
     }
 
+}
 
-    .whatsapp-flotante {
 
-        right: 18px;
+/* ==================================================
+   CELULAR PEQUEÑO
+================================================== */
 
-        bottom: 18px;
+@media (max-width: 600px) {
 
-        width: 44px;
+    .nav-menu {
+        gap: 10px;
+    }
 
-        height: 44px;
+    .nav-menu a:not(.contacto-btn) {
+        display: none;
+    }
 
+    .logo {
+        font-size: 21px;
+    }
+
+    .hero-content {
+        min-height: 600px;
+
+        padding-top: 110px;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+
+        line-height: 0.9;
+    }
+
+    .descripcion {
+        font-size: 16px;
+    }
+
+    .trabajo-btn {
+        font-size: 15px;
+
+        padding: 14px 22px;
+    }
+
+    .hero-image {
+        height: 110vw;
     }
 
 }
