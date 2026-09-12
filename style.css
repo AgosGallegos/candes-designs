@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
 /* =========================================
-   CONFIGURACIÓN GENERAL
+   GENERAL
 ========================================= */
 
 * {
@@ -13,9 +15,10 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     background: #f7f2e9;
-    color: #151515;
+    color: #111111;
+    overflow-x: hidden;
 }
 
 a {
@@ -28,13 +31,13 @@ a {
    NAVEGACIÓN
 ========================================= */
 
-header {
+.header {
     position: fixed;
     top: 0;
     left: 0;
+
     width: 100%;
-    height: 92px;
-    z-index: 1000;
+    height: 90px;
 
     display: flex;
     align-items: center;
@@ -42,27 +45,35 @@ header {
 
     padding: 0 7%;
 
-    background: rgba(10, 10, 10, 0.45);
-    backdrop-filter: blur(4px);
+    background: rgba(10, 10, 10, 0.78);
+
+    backdrop-filter: blur(8px);
+
+    z-index: 1000;
 }
 
 .logo {
-    font-size: 30px;
-    font-weight: 800;
     color: #1267ff;
+
+    font-size: 28px;
+    font-weight: 800;
+
     letter-spacing: -1px;
 }
 
 .menu {
     display: flex;
     align-items: center;
-    gap: 45px;
+
+    gap: 42px;
 }
 
 .menu a {
     color: white;
+
     font-size: 16px;
     font-weight: 700;
+
     transition: 0.3s ease;
 }
 
@@ -70,21 +81,9 @@ header {
     color: #1267ff;
 }
 
-.contacto-menu {
-    background: #1267ff;
-    padding: 14px 28px;
-    border-radius: 30px;
-    color: white !important;
-}
-
-.contacto-menu:hover {
-    background: #0755dc;
-    color: white !important;
-}
-
 
 /* =========================================
-   SECCIONES
+   TODAS LAS SECCIONES
 ========================================= */
 
 .seccion {
@@ -94,11 +93,13 @@ header {
 
 
 /* =========================================
-   PORTADA / INICIO
+   INICIO
 ========================================= */
 
-#inicio {
+.hero {
     min-height: 100vh;
+
+    width: 100%;
 
     position: relative;
 
@@ -108,40 +109,43 @@ header {
     overflow: hidden;
 
     /*
-       IMPORTANTE:
-       Esta es la imagen que tenés en GitHub.
-       Se usa %20 para representar los espacios del nombre.
+       FOTO DE PORTADA
     */
 
     background-image:
         linear-gradient(
             90deg,
-            rgba(0, 0, 0, 0.68) 0%,
-            rgba(0, 0, 0, 0.48) 40%,
-            rgba(0, 0, 0, 0.12) 75%,
+            rgba(0, 0, 0, 0.62) 0%,
+            rgba(0, 0, 0, 0.42) 42%,
+            rgba(0, 0, 0, 0.08) 75%,
             rgba(0, 0, 0, 0.20) 100%
         ),
-        url("portada%20(2).jpg");
+        url("portada%20%282%29.jpg");
 
     background-size: cover;
 
     /*
-       Cambiamos la posición para que
-       la cara quede visible.
+       La movemos un poco hacia la derecha
+       para mostrar mejor a Cande.
     */
+
     background-position: center center;
 
     background-repeat: no-repeat;
 }
 
 
-/* Contenido de la portada */
+/* =========================================
+   CONTENIDO DEL HERO
+========================================= */
 
 .hero-contenido {
     position: relative;
+
     z-index: 2;
 
     width: 100%;
+
     max-width: 1250px;
 
     margin: 0 auto;
@@ -149,70 +153,73 @@ header {
     padding: 120px 7% 80px;
 }
 
-.hero-texto {
-    max-width: 680px;
-}
 
-
-/* Texto pequeño superior */
+/* Texto pequeño */
 
 .hero-subtitulo {
     color: white;
 
     font-size: 14px;
+
     font-weight: 600;
 
     letter-spacing: 5px;
 
-    margin-bottom: 35px;
-
-    text-transform: uppercase;
+    margin-bottom: 30px;
 }
 
 
-/* Título principal */
+/* TÍTULO */
 
-.hero-titulo {
-    font-size: clamp(70px, 8vw, 125px);
+.hero h1 {
+    color: white;
+
+    font-size: clamp(70px, 8vw, 120px);
 
     line-height: 0.88;
 
     font-weight: 900;
 
-    letter-spacing: -5px;
+    letter-spacing: -6px;
 
-    color: white;
+    max-width: 850px;
 
     margin-bottom: 35px;
 }
 
-.hero-titulo .azul {
-    color: #1267ff;
+
+/*
+   La palabra Designs tendrá azul.
+*/
+
+.hero h1::first-line {
+    color: white;
 }
 
 
-/* Descripción */
+/* Texto */
 
-.hero-descripcion {
+.hero-texto {
     color: white;
+
+    max-width: 570px;
 
     font-size: 18px;
 
     line-height: 1.6;
 
-    max-width: 570px;
-
     margin-bottom: 38px;
 }
 
 
-/* Botón */
+/* =========================================
+   BOTÓN
+========================================= */
 
-.boton-trabajo {
+.boton {
     display: inline-flex;
 
     align-items: center;
-    gap: 12px;
 
     background: #1267ff;
 
@@ -220,60 +227,227 @@ header {
 
     padding: 16px 28px;
 
-    border-radius: 35px;
+    border-radius: 30px;
 
     font-size: 16px;
 
     font-weight: 700;
 
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.boton-trabajo:hover {
+.boton::after {
+    content: "→";
+
+    font-size: 20px;
+
+    margin-left: 12px;
+}
+
+.boton:hover {
     background: #0755dc;
 
     transform: translateY(-3px);
 }
 
-.boton-trabajo span {
-    font-size: 22px;
+
+/* =========================================
+   SOBRE MÍ
+========================================= */
+
+.sobre-mi {
+    min-height: 100vh;
+
+    background: #f7f2e9;
+
+    display: flex;
+
+    align-items: center;
+}
+
+.contenedor {
+    width: 100%;
+
+    max-width: 1150px;
+
+    margin: 0 auto;
+}
+
+.etiqueta {
+    color: #1267ff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.sobre-mi h2 {
+    max-width: 850px;
+
+    font-size: clamp(45px, 6vw, 80px);
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 50px;
+}
+
+.sobre-mi-contenido {
+    max-width: 700px;
+}
+
+.sobre-mi-texto p {
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
 }
 
 
 /* =========================================
-   INDICADORES
+   PORTFOLIO
 ========================================= */
 
-.indicadores {
-    position: absolute;
+.portfolio {
+    min-height: 100vh;
 
-    bottom: 35px;
-    left: 7%;
+    background: #111111;
 
-    z-index: 5;
+    color: white;
+
+    padding: 120px 7%;
+}
+
+.portfolio h2 {
+    font-size: clamp(50px, 6vw, 85px);
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 20px;
+}
+
+.descripcion-seccion {
+    font-size: 18px;
+
+    opacity: 0.75;
+
+    margin-bottom: 50px;
+}
+
+
+/* Grilla */
+
+.portfolio-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.proyecto {
+    background: #1d1d1d;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+.proyecto-imagen {
+    width: 100%;
+
+    height: 260px;
+
+    background: #292929;
 
     display: flex;
 
     align-items: center;
 
-    gap: 25px;
+    justify-content: center;
+}
 
-    color: white;
+.imagen-placeholder {
+    color: #777;
+
+    font-size: 18px;
+}
+
+.proyecto-info {
+    padding: 25px;
+}
+
+.categoria {
+    color: #1267ff;
 
     font-size: 13px;
 
     font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
 }
 
-.indicadores .activo {
-    color: white;
+.proyecto-info h3 {
+    font-size: 24px;
+
+    margin-bottom: 10px;
 }
 
-.linea-indicador {
-    width: 45px;
-    height: 2px;
+.proyecto-info p {
+    line-height: 1.6;
 
-    background: white;
+    opacity: 0.75;
+}
+
+
+/* =========================================
+   CONTACTO
+========================================= */
+
+#contacto {
+    min-height: 100vh;
+
+    background: #f7f2e9;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 120px 7%;
+}
+
+#contacto h2 {
+    font-size: clamp(55px, 7vw, 100px);
+
+    line-height: 0.9;
+
+    font-weight: 900;
+
+    letter-spacing: -5px;
+
+    margin-bottom: 30px;
+}
+
+#contacto p {
+    font-size: 19px;
+
+    line-height: 1.6;
+
+    max-width: 600px;
 }
 
 
@@ -301,154 +475,13 @@ header {
 
     z-index: 2000;
 
-    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
 
     transition: 0.3s ease;
 }
 
 .whatsapp:hover {
     transform: scale(1.1);
-}
-
-.whatsapp img {
-    width: 25px;
-    height: 25px;
-}
-
-
-/* =========================================
-   SOBRE MÍ
-========================================= */
-
-#sobre-mi {
-    min-height: 100vh;
-
-    background: #f7f2e9;
-
-    padding: 120px 7%;
-}
-
-.sobre-contenido {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.sobre-contenido h2 {
-    font-size: 65px;
-    line-height: 1;
-    font-weight: 900;
-    margin-bottom: 35px;
-}
-
-.sobre-contenido h2 span {
-    color: #1267ff;
-}
-
-.sobre-contenido p {
-    max-width: 700px;
-
-    font-size: 19px;
-
-    line-height: 1.7;
-}
-
-
-/* =========================================
-   PORTFOLIO
-========================================= */
-
-#portfolio {
-    min-height: 100vh;
-
-    background: #111111;
-
-    color: white;
-
-    padding: 120px 7%;
-}
-
-.portfolio-contenido {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.portfolio-contenido h2 {
-    font-size: 65px;
-    font-weight: 900;
-    margin-bottom: 50px;
-}
-
-.portfolio-contenido h2 span {
-    color: #1267ff;
-}
-
-.portfolio-grid {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 25px;
-}
-
-.portfolio-item {
-    min-height: 300px;
-
-    background: #222;
-
-    border-radius: 15px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    font-size: 20px;
-}
-
-
-/* =========================================
-   CONTACTO
-========================================= */
-
-#contacto {
-    min-height: 100vh;
-
-    background: #f7f2e9;
-
-    padding: 120px 7%;
-
-    display: flex;
-
-    align-items: center;
-}
-
-.contacto-contenido {
-    max-width: 1200px;
-    width: 100%;
-
-    margin: 0 auto;
-}
-
-.contacto-contenido h2 {
-    font-size: 70px;
-
-    font-weight: 900;
-
-    line-height: 1;
-
-    margin-bottom: 30px;
-}
-
-.contacto-contenido h2 span {
-    color: #1267ff;
-}
-
-.contacto-contenido p {
-    font-size: 20px;
-
-    line-height: 1.6;
-
-    max-width: 600px;
 }
 
 
@@ -467,17 +500,19 @@ footer {
 }
 
 footer p {
-    font-size: 14px;
+    font-size: 13px;
+
+    opacity: 0.7;
 }
 
 
 /* =========================================
-   RESPONSIVE - TABLET
+   CELULAR
 ========================================= */
 
 @media (max-width: 900px) {
 
-    header {
+    .header {
         padding: 0 5%;
     }
 
@@ -489,35 +524,34 @@ footer p {
         font-size: 14px;
     }
 
-    .hero-contenido {
-        padding-left: 7%;
-        padding-right: 7%;
+    .hero {
+        background-position: 58% center;
     }
 
-    .hero-titulo {
+    .hero-contenido {
+        padding-left: 7%;
+    }
+
+    .hero h1 {
         font-size: 75px;
     }
 
-    #inicio {
-        background-position: 58% center;
+    .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 
-/* =========================================
-   RESPONSIVE - CELULAR
-========================================= */
+@media (max-width: 600px) {
 
-@media (max-width: 650px) {
-
-    header {
+    .header {
         height: 75px;
 
         padding: 0 5%;
     }
 
     .logo {
-        font-size: 22px;
+        font-size: 21px;
     }
 
     .menu {
@@ -525,15 +559,11 @@ footer p {
     }
 
     .menu a {
-        font-size: 12px;
+        font-size: 11px;
     }
 
-    .contacto-menu {
-        padding: 9px 14px;
-    }
-
-    #inicio {
-        background-position: 60% center;
+    .hero {
+        background-position: 62% center;
     }
 
     .hero-contenido {
@@ -542,37 +572,25 @@ footer p {
 
     .hero-subtitulo {
         font-size: 10px;
+
         letter-spacing: 3px;
     }
 
-    .hero-titulo {
+    .hero h1 {
         font-size: 58px;
+
         letter-spacing: -3px;
     }
 
-    .hero-descripcion {
+    .hero-texto {
         font-size: 16px;
-    }
-
-    .indicadores {
-        left: 7%;
-        bottom: 25px;
-    }
-
-    .whatsapp {
-        width: 43px;
-        height: 43px;
-
-        right: 18px;
-        bottom: 18px;
-    }
-
-    .whatsapp img {
-        width: 22px;
-        height: 22px;
     }
 
     .portfolio-grid {
         grid-template-columns: 1fr;
+    }
+
+    #contacto h2 {
+        font-size: 55px;
     }
 }
