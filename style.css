@@ -1,6 +1,6 @@
-/* =====================================================
+/* =========================================================
    CONFIGURACIÓN GENERAL
-===================================================== */
+========================================================= */
 
 * {
     margin: 0;
@@ -14,8 +14,8 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
-    background: #111;
+    background: #f8f3eb;
+    color: #171717;
 }
 
 a {
@@ -24,60 +24,51 @@ a {
 }
 
 
-/* =====================================================
-   COLORES
-===================================================== */
+/* =========================================================
+   COLORES PRINCIPALES
+========================================================= */
 
 :root {
-    --azul: #1464ff;
+    --azul: #1264ff;
+    --azul-hover: #0052e8;
+    --negro: #171717;
+    --crema: #f8f3eb;
     --blanco: #ffffff;
-    --crema: #fff8ef;
-    --negro: #111111;
+    --gris: #555555;
 }
 
 
-/* =====================================================
+/* =========================================================
    NAVEGACIÓN
-===================================================== */
+========================================================= */
 
-.header {
+header {
     position: absolute;
-
     top: 0;
     left: 0;
 
     width: 100%;
-
     height: 90px;
 
-    padding: 0 7%;
+    z-index: 100;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    background: transparent;
+    padding: 0 7%;
 
-    z-index: 100;
+    background: transparent;
 }
 
 
 /* LOGO */
 
 .logo {
-    color: white;
-
     font-size: 27px;
-
     font-weight: 800;
-
-    letter-spacing: -1px;
-
-    transition: 0.3s;
-}
-
-.logo:hover {
     color: var(--azul);
+    letter-spacing: -1px;
 }
 
 
@@ -85,183 +76,153 @@ a {
 
 .menu {
     display: flex;
-
     align-items: center;
-
-    gap: 38px;
+    gap: 42px;
 }
 
 .menu a {
-    color: white;
-
-    font-size: 15px;
-
+    font-size: 16px;
     font-weight: 600;
+    color: var(--negro);
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .menu a:hover {
-    opacity: 0.7;
-}
-
-
-/* CONTACTO */
-
-.contacto-menu {
-    background: var(--azul);
-
-    padding: 13px 25px;
-
-    border-radius: 30px;
-}
-
-.contacto-menu:hover {
-    background: white;
-
-    color: var(--azul) !important;
-
-    opacity: 1 !important;
-}
-
-
-/* =====================================================
-   HERO / PORTADA
-===================================================== */
-
-.hero {
-    position: relative;
-
-    min-height: 100vh;
-
-    width: 100%;
-
-    display: flex;
-
-    align-items: center;
-
-    overflow: hidden;
-
-    background-image: url("portada%20(2).jpg");
-
-    background-size: cover;
-
-    background-repeat: no-repeat;
-
-    /*
-       IMPORTANTE:
-       Ajustamos la posición para intentar
-       mostrar la cara completa.
-    */
-
-    background-position: center center;
-}
-
-
-/* OSCURECIMIENTO DE LA FOTO */
-
-.hero-overlay {
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.68) 0%,
-            rgba(0, 0, 0, 0.48) 35%,
-            rgba(0, 0, 0, 0.20) 70%,
-            rgba(0, 0, 0, 0.15) 100%
-        );
-
-    z-index: 1;
-}
-
-
-/* =====================================================
-   CONTENIDO
-===================================================== */
-
-.hero-contenido {
-    position: relative;
-
-    z-index: 2;
-
-    width: 90%;
-
-    max-width: 1100px;
-
-    margin: 0 auto;
-
-    padding-top: 50px;
-
-    color: white;
-}
-
-
-/* SUBTÍTULO */
-
-.hero-subtitulo {
-    font-size: 14px;
-
-    letter-spacing: 6px;
-
-    font-weight: 600;
-
-    margin-bottom: 28px;
-
-    color: white;
-}
-
-
-/* =====================================================
-   TÍTULO
-===================================================== */
-
-.hero h1 {
-    font-size: clamp(70px, 9vw, 125px);
-
-    line-height: 0.88;
-
-    letter-spacing: -5px;
-
-    font-weight: 800;
-
-    color: var(--crema);
-
-    margin-bottom: 35px;
-}
-
-
-/* SEGUNDA PARTE AZUL */
-
-.hero h1 span {
     color: var(--azul);
 }
 
 
-/* =====================================================
-   TEXTO
-===================================================== */
+/* BOTÓN CONTACTO */
 
-.hero-texto {
-    max-width: 560px;
+.contacto-menu {
+    background: var(--azul);
+    color: white !important;
 
-    font-size: 18px;
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    transition: 0.3s ease;
+}
+
+.contacto-menu:hover {
+    background: var(--azul-hover);
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   PORTADA / INICIO
+========================================================= */
+
+.hero {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--crema);
+}
+
+
+/* =========================================================
+   CONTENIDO IZQUIERDO
+========================================================= */
+
+.hero-contenido {
+    width: 50%;
+
+    padding-left: 9%;
+    padding-right: 4%;
+
+    position: relative;
+    z-index: 5;
+}
+
+
+/* PEQUEÑO TEXTO SUPERIOR */
+
+.hero-contenido .subtitulo {
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: var(--negro);
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   TÍTULO PRINCIPAL
+========================================================= */
+
+.hero h1 {
+    font-size: clamp(65px, 7vw, 105px);
+
+    line-height: 0.88;
+
+    font-weight: 800;
+
+    letter-spacing: -5px;
+
+    margin-bottom: 32px;
+
+    color: var(--negro);
+}
+
+
+/* CANDE'S */
+
+.hero h1 .titulo-negro {
+    display: block;
+
+    color: var(--negro);
+}
+
+
+/* DESIGNS */
+
+.hero h1 .titulo-azul {
+    display: block;
+
+    color: var(--azul);
+}
+
+
+/* =========================================================
+   DESCRIPCIÓN
+========================================================= */
+
+.hero-contenido p {
+    max-width: 510px;
+
+    font-size: 17px;
 
     line-height: 1.6;
 
-    color: white;
+    color: #333333;
 
     margin-bottom: 35px;
 }
 
 
-/* =====================================================
-   BOTÓN
-===================================================== */
+/* =========================================================
+   BOTÓN "VER MI TRABAJO"
+========================================================= */
 
-.boton {
+.boton-trabajo {
     display: inline-flex;
 
     align-items: center;
@@ -274,44 +235,105 @@ a {
 
     padding: 16px 28px;
 
-    border-radius: 30px;
+    border-radius: 35px;
 
     font-size: 16px;
 
     font-weight: 700;
 
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
-.boton span {
-    font-size: 20px;
-
-    transition: 0.3s;
-}
-
-.boton:hover {
-    background: white;
-
-    color: var(--azul);
+.boton-trabajo:hover {
+    background: var(--azul-hover);
 
     transform: translateY(-3px);
+
+    box-shadow: 0 10px 25px rgba(18, 100, 255, 0.25);
 }
 
-.boton:hover span {
+
+/* FLECHA */
+
+.boton-trabajo::after {
+    content: "→";
+
+    font-size: 20px;
+
+    transition: 0.3s ease;
+}
+
+.boton-trabajo:hover::after {
     transform: translateX(5px);
 }
 
 
-/* =====================================================
-   INDICADORES
-===================================================== */
+/* =========================================================
+   FOTO DE CANDE
+========================================================= */
 
-.indicadores {
+.hero-imagen {
     position: absolute;
 
-    z-index: 3;
+    top: 0;
+    right: 0;
 
-    left: 7%;
+    width: 50%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+
+/* IMAGEN */
+
+.hero-imagen img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+
+    display: block;
+}
+
+
+/* =========================================================
+   DETALLE AZUL SOBRE LA FOTO
+========================================================= */
+
+.hero-imagen::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    width: 120px;
+    height: 120px;
+
+    background: var(--azul);
+
+    clip-path: polygon(
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+
+    opacity: 0.95;
+}
+
+
+/* =========================================================
+   INDICADOR INFERIOR
+========================================================= */
+
+.hero-indicador {
+    position: absolute;
+
+    left: 9%;
 
     bottom: 35px;
 
@@ -319,137 +341,236 @@ a {
 
     align-items: center;
 
-    gap: 12px;
+    gap: 15px;
 
-    color: white;
+    font-size: 12px;
 
-    font-size: 11px;
+    font-weight: 700;
 
-    letter-spacing: 2px;
+    z-index: 10;
 }
 
-.numero {
-    opacity: 0.5;
+.hero-indicador .numero {
+    color: var(--negro);
 }
 
-.numero.activo {
-    opacity: 1;
-}
-
-.linea {
+.hero-indicador .linea {
     width: 45px;
+    height: 2px;
 
-    height: 1px;
-
-    background: white;
-
-    opacity: 0.8;
+    background: var(--negro);
 }
 
-.linea.corta {
-    width: 20px;
-
-    opacity: 0.4;
+.hero-indicador .texto {
+    color: #777777;
 }
 
 
-/* =====================================================
-   FLECHA
-===================================================== */
-
-.flecha-abajo {
-    position: absolute;
-
-    z-index: 3;
-
-    right: 6%;
-
-    bottom: 28px;
-
-    color: white;
-
-    font-size: 30px;
-
-    font-weight: 300;
-
-    animation: bajar 1.8s infinite;
-}
-
-@keyframes bajar {
-
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(7px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-
-}
-
-
-/* =====================================================
+/* =========================================================
    WHATSAPP
-===================================================== */
+========================================================= */
 
-.whatsapp-flotante {
+.whatsapp {
     position: fixed;
 
-    right: 22px;
+    right: 25px;
+    bottom: 25px;
 
-    bottom: 20px;
+    width: 48px;
+    height: 48px;
 
-    z-index: 200;
+    background: #25d366;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 999;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+
+    transition: 0.3s ease;
+}
+
+.whatsapp:hover {
+    transform: scale(1.08);
+}
+
+
+/* LOGO WHATSAPP */
+
+.whatsapp img {
+    width: 24px;
+    height: 24px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   SECCIONES GENERALES
+========================================================= */
+
+section {
+    min-height: 100vh;
+
+    padding: 100px 8%;
+}
+
+
+/* =========================================================
+   SOBRE MÍ
+========================================================= */
+
+.sobre-mi {
+    background: #ffffff;
 
     display: flex;
 
     align-items: center;
 
-    gap: 7px;
+    justify-content: center;
+}
+
+.sobre-mi-contenido {
+    max-width: 900px;
+}
+
+.sobre-mi h2,
+.portfolio h2,
+.contacto h2 {
+    font-size: 55px;
+
+    margin-bottom: 25px;
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+}
+
+.sobre-mi p {
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: var(--gris);
+
+    max-width: 750px;
+}
+
+
+/* =========================================================
+   PORTFOLIO
+========================================================= */
+
+.portfolio {
+    background: var(--crema);
+}
+
+.portfolio h2 {
+    color: var(--negro);
+}
+
+
+/* =========================================================
+   CONTACTO
+========================================================= */
+
+.contacto {
+    background: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+.contacto h2 {
+    margin-bottom: 20px;
+}
+
+.contacto p {
+    font-size: 18px;
+
+    color: var(--gris);
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: var(--negro);
 
     color: white;
 
-    font-size: 11px;
+    text-align: center;
 
-    font-weight: 600;
-
-    opacity: 0.9;
-
-    transition: 0.3s;
+    padding: 25px;
 }
 
-.whatsapp-flotante svg {
-    width: 32px;
+footer p {
+    font-size: 14px;
 
-    height: 32px;
-
-    fill: #25D366;
-
-    filter:
-        drop-shadow(
-            0 3px 8px
-            rgba(0, 0, 0, 0.4)
-        );
-}
-
-.whatsapp-flotante:hover {
-    transform: scale(1.05);
-
-    opacity: 1;
+    opacity: 0.8;
 }
 
 
-/* =====================================================
+/* =========================================================
+   ANIMACIONES
+========================================================= */
+
+.hero-contenido {
+    animation: aparecerIzquierda 0.9s ease forwards;
+}
+
+.hero-imagen {
+    animation: aparecerFoto 1s ease forwards;
+}
+
+@keyframes aparecerIzquierda {
+
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes aparecerFoto {
+
+    from {
+        opacity: 0;
+        transform: scale(1.03);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* =========================================================
    TABLET
-===================================================== */
+========================================================= */
 
 @media (max-width: 900px) {
 
-    .header {
+    header {
         padding: 0 5%;
     }
 
@@ -457,28 +578,28 @@ a {
         gap: 22px;
     }
 
-    .menu a {
-        font-size: 14px;
-    }
-
     .hero-contenido {
-        width: 90%;
+        padding-left: 6%;
     }
 
-    .hero {
-        background-position: center center;
+    .hero h1 {
+        font-size: 65px;
+    }
+
+    .hero-contenido p {
+        font-size: 15px;
     }
 
 }
 
 
-/* =====================================================
+/* =========================================================
    CELULAR
-===================================================== */
+========================================================= */
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
 
-    .header {
+    header {
         height: 75px;
 
         padding: 0 5%;
@@ -493,104 +614,107 @@ a {
     }
 
     .menu a {
-        font-size: 11px;
+        font-size: 13px;
     }
 
     .contacto-menu {
-        padding: 9px 13px;
+        padding: 10px 15px;
     }
 
+
+    /* PORTADA */
 
     .hero {
         min-height: 100vh;
 
-        /*
-          En celular intentamos llevar
-          la imagen hacia la derecha
-          para conservar la cara.
-        */
+        display: flex;
 
-        background-position: 62% center;
+        align-items: flex-end;
     }
 
 
-    .hero-overlay {
-        background:
-            linear-gradient(
-                90deg,
-                rgba(0, 0, 0, 0.72),
-                rgba(0, 0, 0, 0.35)
-            );
+    /* FOTO ARRIBA */
+
+    .hero-imagen {
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 55%;
     }
 
+    .hero-imagen img {
+        object-position: center top;
+    }
+
+
+    /* CONTENIDO */
 
     .hero-contenido {
-        padding-top: 60px;
+        width: 100%;
 
-        width: 90%;
+        padding: 0 7% 50px;
+
+        background: var(--crema);
+
+        z-index: 5;
     }
 
+    .hero-contenido .subtitulo {
+        font-size: 10px;
 
-    .hero-subtitulo {
-        font-size: 9px;
+        letter-spacing: 2px;
 
-        letter-spacing: 3px;
+        margin-bottom: 15px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+
+        line-height: 0.9;
+
+        letter-spacing: -3px;
 
         margin-bottom: 20px;
     }
 
-
-    .hero h1 {
-        font-size: 58px;
-
-        letter-spacing: -3px;
-
-        margin-bottom: 25px;
-    }
-
-
-    .hero-texto {
-        font-size: 15px;
+    .hero-contenido p {
+        font-size: 14px;
 
         line-height: 1.5;
 
-        max-width: 340px;
-
-        margin-bottom: 28px;
+        margin-bottom: 22px;
     }
 
-
-    .boton {
-        padding: 14px 22px;
+    .boton-trabajo {
+        padding: 13px 22px;
 
         font-size: 14px;
     }
 
 
-    .indicadores {
-        left: 5%;
+    /* INDICADOR */
 
-        bottom: 25px;
-    }
-
-
-    .flecha-abajo {
-        right: 5%;
-
-        bottom: 20px;
-
-        font-size: 25px;
-    }
-
-
-    .whatsapp-flotante {
-        right: 15px;
-
-        bottom: 12px;
-    }
-
-    .whatsapp-flotante span {
+    .hero-indicador {
         display: none;
+    }
+
+
+    /* WHATSAPP */
+
+    .whatsapp {
+        width: 44px;
+        height: 44px;
+
+        right: 18px;
+        bottom: 18px;
+    }
+
+    .whatsapp img {
+        width: 21px;
+        height: 21px;
     }
 
 }
