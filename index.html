@@ -1,502 +1,211 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Cande's Designs</title>
 
-    <meta
-        name="description"
-        content="Cande's Designs - Diseño, fotografía, audiovisual y comunicación visual."
-    >
-
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
-
-    <!-- =====================================================
+    <!-- =========================
          NAVEGACIÓN
-    ====================================================== -->
+    ========================== -->
 
-    <header class="header">
+    <header class="navbar">
 
         <a href="#inicio" class="logo">
             Cande's Designs
         </a>
 
+        <nav class="nav-menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#portfolio">Portfolio</a>
 
-        <nav class="menu">
-
-            <a href="#inicio">
-                Inicio
-            </a>
-
-            <a href="#sobre-mi">
-                Sobre mí
-            </a>
-
-            <a href="#portfolio">
-                Portfolio
-            </a>
-
-            <a href="#contacto" class="contacto-menu">
+            <a href="#contacto" class="contacto-btn">
                 Contacto
             </a>
-
         </nav>
 
     </header>
 
 
-
-    <!-- =====================================================
-         CONTENIDO PRINCIPAL
-    ====================================================== -->
+    <!-- =========================
+         INICIO
+    ========================== -->
 
     <main>
 
+        <section id="inicio" class="hero">
 
-        <!-- =================================================
-             INICIO
-        ================================================== -->
+            <!-- COLUMNA IZQUIERDA -->
 
-        <section id="inicio" class="pagina hero">
+            <div class="hero-content">
 
-
-            <!-- CONTENIDO IZQUIERDO -->
-
-            <div class="hero-contenido">
-
-
-                <p class="hero-subtitulo">
+                <p class="categoria">
                     DISEÑO · FOTOGRAFÍA<br>
                     AUDIOVISUAL · COMUNIDAD
                 </p>
 
-
                 <h1>
-                    Cande's<br>
+                    Cande's
                     <span>Designs</span>
                 </h1>
 
-
-                <p class="hero-texto">
+                <p class="descripcion">
                     Creo diseños y contenido visual que cuentan historias,
                     transmiten ideas y hacen que cada proyecto tenga su
                     propia identidad.
                 </p>
 
-
-                <a href="#portfolio" class="boton">
-                    Ver mi trabajo →
+                <a href="#portfolio" class="trabajo-btn">
+                    Ver mi trabajo <span>→</span>
                 </a>
 
+                <div class="indicadores">
+                    <strong>01</strong>
+                    <span>02</span>
+                    <span>03</span>
+                </div>
 
             </div>
 
 
+            <!-- COLUMNA DERECHA -->
 
-            <!-- FOTO DERECHA -->
+            <div class="hero-image">
 
-            <div class="hero-imagen">
+                <!--
+                IMPORTANTE:
+                Cambiá "foto-cande.jpg" por el nombre EXACTO
+                de la foto que tenés subida en GitHub.
+                -->
 
                 <img
-                    src="portada%20%282%29.jpg"
-                    alt="Cande's Designs"
+                    src="foto-cande.jpg"
+                    alt="Cande fotografiando"
                 >
 
-            </div>
-
-
-
-            <!-- INDICADORES -->
-
-            <div class="hero-indicadores">
-
-                <span class="activo">
-                    01
-                </span>
-
-                <span>
-                    02
-                </span>
-
-                <span>
-                    03
-                </span>
+                <!-- Degradado que integra la foto con el fondo -->
+                <div class="photo-gradient"></div>
 
             </div>
-
 
         </section>
 
 
-
-        <!-- =================================================
+        <!-- =========================
              SOBRE MÍ
-        ================================================== -->
+        ========================== -->
 
-        <section
-            id="sobre-mi"
-            class="pagina seccion sobre-mi"
-        >
+        <section id="sobre-mi" class="page-section">
 
-            <div class="contenedor">
+            <div class="section-inner">
 
-
-                <p class="etiqueta">
+                <p class="small-title">
                     SOBRE MÍ
                 </p>
 
-
                 <h2>
-                    Conocé un poco más sobre mi trabajo
+                    Creo imágenes<br>
+                    que cuentan historias.
                 </h2>
 
-
-                <div class="sobre-mi-contenido">
-
-
-                    <div class="sobre-mi-texto">
-
-                        <p>
-                            ¡Hola! Soy Cande y este es mi espacio creativo.
-                        </p>
-
-
-                        <p>
-                            Me apasiona el diseño, la fotografía y la creación
-                            de contenido visual.
-                        </p>
-
-
-                        <p>
-                            Busco que cada proyecto tenga una identidad propia
-                            y represente la idea de cada cliente.
-                        </p>
-
-
-                        <p>
-                            En Cande's Designs trabajo para transformar ideas
-                            en propuestas visuales atractivas, modernas
-                            y auténticas.
-                        </p>
-
-                    </div>
-
-
-                </div>
-
+                <p>
+                    Soy Cande y trabajo en diseño, fotografía,
+                    contenido audiovisual y comunicación visual.
+                </p>
 
             </div>
 
         </section>
 
 
-
-        <!-- =================================================
+        <!-- =========================
              PORTFOLIO
-        ================================================== -->
+        ========================== -->
 
-        <section
-            id="portfolio"
-            class="pagina seccion portfolio"
-        >
+        <section id="portfolio" class="page-section portfolio-section">
 
-            <div class="contenedor">
+            <div class="section-inner">
 
-
-                <p class="etiqueta">
+                <p class="small-title">
                     PORTFOLIO
                 </p>
 
-
                 <h2>
-                    Algunos de mis trabajos
+                    Algunos de mis trabajos.
                 </h2>
-
-
-                <p class="descripcion-seccion">
-                    Una selección de proyectos y trabajos creativos.
-                </p>
-
-
 
                 <div class="portfolio-grid">
 
+                    <div class="portfolio-card">
+                        <span>01</span>
+                        <h3>Fotografía</h3>
+                    </div>
 
-                    <!-- PROYECTO 1 -->
+                    <div class="portfolio-card">
+                        <span>02</span>
+                        <h3>Diseño</h3>
+                    </div>
 
-                    <article class="proyecto">
-
-                        <div class="proyecto-imagen">
-
-                            <div class="imagen-placeholder">
-                                Proyecto 01
-                            </div>
-
-                        </div>
-
-
-                        <div class="proyecto-info">
-
-                            <p class="categoria">
-                                Diseño
-                            </p>
-
-
-                            <h3>
-                                Identidad visual
-                            </h3>
-
-
-                            <p>
-                                Diseño y desarrollo de una propuesta
-                                visual para una marca.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- PROYECTO 2 -->
-
-                    <article class="proyecto">
-
-                        <div class="proyecto-imagen">
-
-                            <div class="imagen-placeholder">
-                                Proyecto 02
-                            </div>
-
-                        </div>
-
-
-                        <div class="proyecto-info">
-
-                            <p class="categoria">
-                                Fotografía
-                            </p>
-
-
-                            <h3>
-                                Sesión fotográfica
-                            </h3>
-
-
-                            <p>
-                                Producción de contenido fotográfico
-                                pensado para comunicar una idea.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- PROYECTO 3 -->
-
-                    <article class="proyecto">
-
-                        <div class="proyecto-imagen">
-
-                            <div class="imagen-placeholder">
-                                Proyecto 03
-                            </div>
-
-                        </div>
-
-
-                        <div class="proyecto-info">
-
-                            <p class="categoria">
-                                Contenido
-                            </p>
-
-
-                            <h3>
-                                Contenido para redes
-                            </h3>
-
-
-                            <p>
-                                Creación de piezas visuales para
-                                comunicación digital.
-                            </p>
-
-                        </div>
-
-                    </article>
-
+                    <div class="portfolio-card">
+                        <span>03</span>
+                        <h3>Audiovisual</h3>
+                    </div>
 
                 </div>
-
 
             </div>
 
         </section>
 
 
-
-        <!-- =================================================
+        <!-- =========================
              CONTACTO
-        ================================================== -->
+        ========================== -->
 
-        <section
-            id="contacto"
-            class="pagina seccion contacto"
-        >
+        <section id="contacto" class="page-section contacto-section">
 
-            <div class="contenedor">
+            <div class="section-inner">
 
-
-                <p class="etiqueta">
+                <p class="small-title">
                     CONTACTO
                 </p>
 
-
                 <h2>
-                    ¿Trabajamos juntos?
+                    Hablemos.
                 </h2>
 
-
-                <p class="descripcion-seccion">
-                    Si tenés un proyecto en mente, escribime
-                    y podemos empezar a darle forma a tu idea.
+                <p>
+                    Si tenés un proyecto o una idea,
+                    podés escribirme por WhatsApp.
                 </p>
-
-
-                <div class="contacto-contenido">
-
-
-                    <a
-                        href="https://wa.me/5490000000000"
-                        target="_blank"
-                        class="whatsapp-contacto"
-                    >
-
-                        <span class="whatsapp-icono">
-                            ☎
-                        </span>
-
-
-                        <div>
-
-                            <strong>
-                                WhatsApp
-                            </strong>
-
-                            <p>
-                                Escribime para consultar
-                            </p>
-
-                        </div>
-
-                    </a>
-
-
-                </div>
-
 
             </div>
 
         </section>
-
 
     </main>
 
 
-
-    <!-- =====================================================
-         WHATSAPP FLOTANTE
-    ====================================================== -->
+    <!-- =========================
+         WHATSAPP
+    ========================== -->
 
     <a
-        href="https://wa.me/5490000000000"
+        href="https://wa.me/5493435201478"
+        class="whatsapp"
         target="_blank"
-        class="whatsapp-flotante"
         aria-label="Contactar por WhatsApp"
     >
-
-        ☎
-
+        <span>☎</span>
     </a>
 
 
-
-    <!-- =====================================================
-         JAVASCRIPT
-         HACE QUE CADA SECCIÓN FUNCIONE COMO UNA PÁGINA
-    ====================================================== -->
-
-    <script>
-
-        function mostrarPagina() {
-
-            let hash = window.location.hash;
-
-
-            if (!hash) {
-                hash = "#inicio";
-            }
-
-
-            const paginas =
-                document.querySelectorAll(".pagina");
-
-
-            paginas.forEach(function (pagina) {
-
-                pagina.style.display = "none";
-
-            });
-
-
-            const paginaActiva =
-                document.querySelector(hash);
-
-
-            if (paginaActiva) {
-
-                paginaActiva.style.display = "flex";
-
-            } else {
-
-                document.querySelector("#inicio").style.display = "flex";
-
-            }
-
-
-            window.scrollTo(0, 0);
-
-        }
-
-
-
-        window.addEventListener(
-            "load",
-            mostrarPagina
-        );
-
-
-        window.addEventListener(
-            "hashchange",
-            mostrarPagina
-        );
-
-    </script>
-
-
 </body>
-
 </html>
