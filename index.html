@@ -1,211 +1,323 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Cande's Designs</title>
 
-    <link rel="stylesheet" href="style.css">
+    <meta
+        name="description"
+        content="Cande's Designs — Diseño, fotografía, comunicación y contenido visual."
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
+
 
 <body>
 
-    <!-- =========================
-         NAVEGACIÓN
-    ========================== -->
 
-    <header class="navbar">
+<header class="header">
 
-        <a href="#inicio" class="logo">
-            Cande's Designs
+    <div class="header-inner">
+
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            CSD<span>✦</span>
         </a>
 
-        <nav class="nav-menu">
-            <a href="#inicio">Inicio</a>
-            <a href="#sobre-mi">Sobre mí</a>
-            <a href="#portfolio">Portfolio</a>
 
-            <a href="#contacto" class="contacto-btn">
+        <nav class="nav">
+
+            <a href="index.html">
+                Inicio
+            </a>
+
+            <a href="sobre-mi.html">
+                Sobre mí
+            </a>
+
+            <a href="servicios.html">
+                Servicios
+            </a>
+
+            <a href="portfolio.html">
+                Portfolio
+            </a>
+
+            <a
+                href="contacto.html"
+                class="contact-button"
+            >
                 Contacto
             </a>
+
         </nav>
 
-    </header>
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Abrir menú"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
 
 
-    <!-- =========================
-         INICIO
-    ========================== -->
+    </div>
 
-    <main>
-
-        <section id="inicio" class="hero">
-
-            <!-- COLUMNA IZQUIERDA -->
-
-            <div class="hero-content">
-
-                <p class="categoria">
-                    DISEÑO · FOTOGRAFÍA<br>
-                    AUDIOVISUAL · COMUNIDAD
-                </p>
-
-                <h1>
-                    Cande's
-                    <span>Designs</span>
-                </h1>
-
-                <p class="descripcion">
-                    Creo diseños y contenido visual que cuentan historias,
-                    transmiten ideas y hacen que cada proyecto tenga su
-                    propia identidad.
-                </p>
-
-                <a href="#portfolio" class="trabajo-btn">
-                    Ver mi trabajo <span>→</span>
-                </a>
-
-                <div class="indicadores">
-                    <strong>01</strong>
-                    <span>02</span>
-                    <span>03</span>
-                </div>
-
-            </div>
+</header>
 
 
-            <!-- COLUMNA DERECHA -->
 
-            <div class="hero-image">
-
-                <!--
-                IMPORTANTE:
-                Cambiá "foto-cande.jpg" por el nombre EXACTO
-                de la foto que tenés subida en GitHub.
-                -->
-
-                <img
-                    src="foto-cande.jpg"
-                    alt="Cande fotografiando"
-                >
-
-                <!-- Degradado que integra la foto con el fondo -->
-                <div class="photo-gradient"></div>
-
-            </div>
-
-        </section>
+<main>
 
 
-        <!-- =========================
-             SOBRE MÍ
-        ========================== -->
-
-        <section id="sobre-mi" class="page-section">
-
-            <div class="section-inner">
-
-                <p class="small-title">
-                    SOBRE MÍ
-                </p>
-
-                <h2>
-                    Creo imágenes<br>
-                    que cuentan historias.
-                </h2>
-
-                <p>
-                    Soy Cande y trabajo en diseño, fotografía,
-                    contenido audiovisual y comunicación visual.
-                </p>
-
-            </div>
-
-        </section>
+<section class="hero">
 
 
-        <!-- =========================
-             PORTFOLIO
-        ========================== -->
-
-        <section id="portfolio" class="page-section portfolio-section">
-
-            <div class="section-inner">
-
-                <p class="small-title">
-                    PORTFOLIO
-                </p>
-
-                <h2>
-                    Algunos de mis trabajos.
-                </h2>
-
-                <div class="portfolio-grid">
-
-                    <div class="portfolio-card">
-                        <span>01</span>
-                        <h3>Fotografía</h3>
-                    </div>
-
-                    <div class="portfolio-card">
-                        <span>02</span>
-                        <h3>Diseño</h3>
-                    </div>
-
-                    <div class="portfolio-card">
-                        <span>03</span>
-                        <h3>Audiovisual</h3>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
+    <div class="hero-content">
 
 
-        <!-- =========================
-             CONTACTO
-        ========================== -->
-
-        <section id="contacto" class="page-section contacto-section">
-
-            <div class="section-inner">
-
-                <p class="small-title">
-                    CONTACTO
-                </p>
-
-                <h2>
-                    Hablemos.
-                </h2>
-
-                <p>
-                    Si tenés un proyecto o una idea,
-                    podés escribirme por WhatsApp.
-                </p>
-
-            </div>
-
-        </section>
-
-    </main>
+        <p class="hero-kicker">
+            DISEÑO · FOTOGRAFÍA<br>
+            AUDIOVISUAL · COMUNIDAD
+        </p>
 
 
-    <!-- =========================
-         WHATSAPP
-    ========================== -->
+        <h1>
 
-    <a
-        href="https://wa.me/5493435201478"
-        class="whatsapp"
-        target="_blank"
-        aria-label="Contactar por WhatsApp"
+            Cande's
+
+            <span>
+                Designs
+            </span>
+
+        </h1>
+
+
+        <p class="hero-description">
+
+            Creo diseños y contenido visual que cuentan
+            historias, transmiten ideas y hacen que cada
+            proyecto tenga su propia identidad.
+
+        </p>
+
+
+        <a
+            href="portfolio.html"
+            class="hero-button"
+        >
+
+            Ver mi trabajo
+
+            <span>
+                →
+            </span>
+
+        </a>
+
+
+        <div class="hero-bottom">
+
+            <span class="hero-number">
+                01
+            </span>
+
+            <span>
+                02
+            </span>
+
+            <span>
+                03
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="hero-image">
+
+
+        <img
+            src="portada (2).jpg"
+            alt="Cande fotografiando"
+        >
+
+
+        <div class="image-overlay"></div>
+
+
+        <div class="image-brand">
+
+            <strong>
+                CSD
+            </strong>
+
+            <span>
+                FOTOGRAFÍA<br>
+                DISEÑO<br>
+                IDEAS
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="creative-note">
+
+        Capturando<br>
+        lo real
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+
+<footer class="footer">
+
+
+    <div class="footer-inner">
+
+
+        <div>
+
+            <a
+                href="index.html"
+                class="footer-logo"
+            >
+                CSD ✦
+            </a>
+
+            <p>
+                Diseño · Fotografía · Audiovisual
+            </p>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <strong>
+                ¿Hablamos?
+            </strong>
+
+            <a
+                href="https://wa.me/5493435201478"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                +54 9 343 520 1478
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        Ideas · Imágenes · Marcas reales
+
+    </div>
+
+
+</footer>
+
+
+
+<a
+    href="https://wa.me/5493435201478"
+    class="whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Escribime por WhatsApp"
+>
+
+    <svg
+        viewBox="0 0 24 24"
+        aria-hidden="true"
     >
-        <span>☎</span>
-    </a>
+
+        <path
+            fill="currentColor"
+            d="M12 2C6.48 2 2 6.48 2 12c0 1.76.46 3.41 1.26 4.86L2 22l5.3-1.23A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Zm0 18.18c-1.57 0-3.03-.43-4.29-1.17l-.31-.18-3.15.73.75-3.06-.2-.32A8.15 8.15 0 1 1 12 20.18Zm4.46-6.1c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.17-.71-.63-1.18-1.4-1.32-1.64-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.46-.39-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"
+        />
+
+    </svg>
+
+</a>
+
+
+
+<script>
+
+const menuToggle =
+    document.getElementById("menuToggle");
+
+const nav =
+    document.querySelector(".nav");
+
+
+menuToggle.addEventListener(
+    "click",
+    function () {
+
+        nav.classList.toggle("active");
+
+    }
+);
+
+</script>
 
 
 </body>
+
 </html>
