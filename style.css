@@ -1,6 +1,16 @@
-/* ==================================================
+
+/* =========================
    CONFIGURACIÓN GENERAL
-================================================== */
+========================= */
+
+:root {
+    --azul: #075efd;
+    --crema: #fff5ec;
+    --blanco: #ffffff;
+    --negro: #171717;
+    --gris: #777777;
+    --gris-claro: #f5f5f5;
+}
 
 * {
     margin: 0;
@@ -13,693 +23,531 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f7f2e9;
-    color: #111111;
+    font-family: 'Poppins', sans-serif;
+    color: var(--negro);
+    background-color: var(--crema);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 
-/* ==================================================
-   COLORES
-================================================== */
+/* =========================
+   ENCABEZADO
+========================= */
 
-:root {
-    --azul: #1769ff;
-    --negro: #111111;
-    --beige: #f7f2e9;
-}
-
-
-/* ==================================================
-   NAVBAR
-================================================== */
-
-.navbar {
-    width: 100%;
-    height: 90px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 0 7%;
-
-    background: var(--beige);
-
-    position: absolute;
+.header {
+    background-color: var(--crema);
+    position: sticky;
     top: 0;
-    left: 0;
-
-    z-index: 100;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
 }
-
-
-/* LOGO */
 
 .logo {
     color: var(--azul);
-    text-decoration: none;
-
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 800;
-    letter-spacing: -1.5px;
+    letter-spacing: -2px;
 }
 
-
-/* MENÚ */
-
-.nav-menu {
-    display: flex;
-    align-items: center;
-    gap: 42px;
-}
-
-.nav-menu a {
+.logo span {
     color: var(--negro);
-    text-decoration: none;
-
-    font-size: 17px;
-    font-weight: 600;
-
-    transition: 0.2s ease;
 }
 
-.nav-menu a:hover {
+.navbar-nav .nav-link {
+    color: var(--negro);
+    font-weight: 500;
+    padding: 12px 18px;
+    transition: 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
     color: var(--azul);
 }
 
-
-/* BOTÓN CONTACTO */
-
-.nav-menu .contacto-btn {
-    background: var(--azul);
-    color: white;
-
-    padding: 15px 27px;
-
-    border-radius: 40px;
-}
-
-.nav-menu .contacto-btn:hover {
-    color: white;
-    transform: translateY(-2px);
+.navbar-nav .nav-link.active {
+    color: var(--azul);
+    font-weight: 700;
 }
 
 
-/* ==================================================
-   HERO / INICIO
-================================================== */
+/* =========================
+   PORTADA PRINCIPAL
+========================= */
 
 .hero {
-    width: 100%;
-    min-height: 100vh;
-
+    min-height: 650px;
+    background-color: var(--azul);
+    color: var(--blanco);
     display: flex;
-
-    position: relative;
-
-    overflow: hidden;
-
-    background: var(--beige);
+    align-items: center;
+    padding: 80px 0;
 }
 
-
-/* ==================================================
-   PARTE IZQUIERDA
-================================================== */
-
-.hero-content {
-    width: 52%;
-
-    min-height: 100vh;
-
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-
-    padding-left: 15%;
-    padding-right: 5%;
-
-    position: relative;
-
-    z-index: 10;
+.hero-contenido {
+    max-width: 850px;
 }
 
-
-/* CATEGORÍA */
-
-.categoria {
-    font-size: 17px;
-
-    letter-spacing: 3px;
-
-    line-height: 1.8;
-
-    margin-bottom: 42px;
+.etiqueta {
+    display: inline-block;
+    color: var(--crema);
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 30px;
+    padding: 9px 18px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
 }
-
-
-/* ==================================================
-   TÍTULO PRINCIPAL
-================================================== */
 
 .hero h1 {
-    font-size: clamp(75px, 7vw, 115px);
-
-    line-height: 0.88;
-
-    letter-spacing: -6px;
-
-    font-weight: 900;
-
-    margin-bottom: 42px;
+    font-size: clamp(42px, 6vw, 75px);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 25px;
 }
-
-
-/* SEGUNDA PALABRA AZUL */
 
 .hero h1 span {
     display: block;
-
-    color: var(--azul);
+    color: var(--crema);
 }
 
-
-/* ==================================================
-   DESCRIPCIÓN
-================================================== */
-
-.descripcion {
-    max-width: 520px;
-
-    font-size: 19px;
-
-    line-height: 1.55;
-
-    color: #333333;
-
+.hero p {
+    max-width: 650px;
+    font-size: 18px;
     margin-bottom: 35px;
+    color: rgba(255,255,255,0.9);
 }
 
-
-/* ==================================================
-   BOTÓN VER MI TRABAJO
-================================================== */
-
-.trabajo-btn {
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    width: fit-content;
-
-    padding: 17px 28px;
-
-    border-radius: 50px;
-
-    background: var(--azul);
-
-    color: white;
-
-    text-decoration: none;
-
-    font-size: 17px;
-
-    font-weight: 700;
-
-    transition: 0.25s ease;
-}
-
-.trabajo-btn:hover {
-    transform: translateY(-3px);
-
-    box-shadow: 0 10px 25px rgba(23, 105, 255, 0.25);
-}
-
-.trabajo-btn span {
-    font-size: 21px;
-}
-
-
-/* ==================================================
-   INDICADORES
-================================================== */
-
-.indicadores {
-    position: absolute;
-
-    left: 15%;
-
-    bottom: 40px;
-
+.botones {
     display: flex;
-
-    align-items: center;
-
-    gap: 25px;
-
-    font-size: 14px;
-}
-
-.indicadores strong {
-    font-weight: 800;
-}
-
-.indicadores span {
-    color: #999999;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 
-/* ==================================================
-   FOTO
-================================================== */
+/* =========================
+   BOTONES
+========================= */
 
-.hero-image {
-    width: 48%;
-
-    height: 100vh;
-
-    position: relative;
-
-    overflow: hidden;
-
-    z-index: 2;
+.boton {
+    display: inline-block;
+    padding: 13px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    border: 2px solid transparent;
 }
 
-
-/* IMAGEN */
-
-.hero-image img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-
-    /*
-    Esta posición permite que se vea
-    la cara y la cámara.
-    */
-
-    object-position: center center;
-
-    /*
-    Blanco y negro.
-    NO usamos blur.
-    */
-
-    filter: grayscale(100%);
-}
-
-
-/* ==================================================
-   DIFUMINACIÓN / DEGRADADO
-================================================== */
-
-/*
-   ESTE ES EL EFECTO QUE FALTABA.
-
-   La foto queda nítida.
-   Solamente se va mezclando con
-   el fondo beige hacia la izquierda.
-*/
-
-.photo-gradient {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 60%;
-    height: 100%;
-
-    z-index: 5;
-
-    pointer-events: none;
-
-    background: linear-gradient(
-        to right,
-
-        rgba(247, 242, 233, 1) 0%,
-
-        rgba(247, 242, 233, 0.95) 12%,
-
-        rgba(247, 242, 233, 0.75) 28%,
-
-        rgba(247, 242, 233, 0.45) 48%,
-
-        rgba(247, 242, 233, 0.15) 72%,
-
-        rgba(247, 242, 233, 0) 100%
-    );
-}
-
-
-/* ==================================================
-   DETALLE SUAVE SOBRE LA FOTO
-================================================== */
-
-.hero-image::after {
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    pointer-events: none;
-
-    z-index: 4;
-
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.03),
-        rgba(0, 0, 0, 0)
-    );
-}
-
-
-/* ==================================================
-   SECCIONES INTERNAS
-================================================== */
-
-.page-section {
-    min-height: 100vh;
-
-    padding: 130px 10%;
-
-    display: flex;
-
-    align-items: center;
-
-    background: var(--beige);
-}
-
-.section-inner {
-    max-width: 1100px;
-    width: 100%;
-}
-
-
-/* TÍTULOS PEQUEÑOS */
-
-.small-title {
+.boton-principal {
+    background-color: var(--crema);
     color: var(--azul);
+}
 
-    font-size: 15px;
+.boton-principal:hover {
+    background-color: var(--blanco);
+    transform: translateY(-3px);
+}
 
-    letter-spacing: 3px;
+.boton-secundario {
+    color: var(--blanco);
+    border-color: var(--blanco);
+}
 
+.boton-secundario:hover {
+    background-color: var(--blanco);
+    color: var(--azul);
+}
+
+.boton-blanco {
+    background-color: var(--crema);
+    color: var(--azul);
+}
+
+.boton-blanco:hover {
+    background-color: var(--blanco);
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   SECCIONES GENERALES
+========================= */
+
+.seccion {
+    padding: 90px 0;
+}
+
+.subtitulo {
+    display: inline-block;
+    color: var(--azul);
     font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
 
+.titulo-seccion {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.titulo-seccion h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.titulo-seccion p {
+    color: var(--gris);
+}
+
+
+/* =========================
+   PRESENTACIÓN
+========================= */
+
+.presentacion {
+    background-color: var(--crema);
+}
+
+.presentacion-contenido {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.presentacion h2 {
+    font-size: clamp(30px, 4vw, 46px);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+.presentacion h2 span {
+    color: var(--azul);
+}
+
+.presentacion p {
+    color: var(--gris);
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   SERVICIOS
+========================= */
+
+.servicios {
+    background-color: var(--blanco);
+}
+
+.tarjeta-servicio {
+    background-color: var(--crema);
+    padding: 40px 30px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.tarjeta-servicio:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(7, 94, 253, 0.10);
+}
+
+.icono-servicio {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--azul);
+    color: var(--blanco);
+    font-size: 30px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
+
+.tarjeta-servicio h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.tarjeta-servicio p {
+    color: var(--gris);
+    margin: 0;
+}
+
+
+/* =========================
+   PORTFOLIO
+========================= */
+
+.portfolio {
+    background-color: var(--crema);
+}
+
+.tarjeta-portfolio {
+    background-color: var(--blanco);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.tarjeta-portfolio:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.imagen-portfolio {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+
+.espacio-foto {
+    background: linear-gradient(135deg, var(--azul), #003db5);
+    color: var(--blanco);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.portfolio-info {
+    padding: 25px;
+}
+
+.portfolio-info h3 {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.portfolio-info p {
+    color: var(--gris);
+    margin: 0;
+}
+
+
+/* =========================
+   SOBRE MÍ
+========================= */
+
+.sobre-mi {
+    background-color: var(--blanco);
+}
+
+.sobre-mi-imagen {
+    min-height: 430px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobre-mi-texto h2 {
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.sobre-mi-texto h2 span {
+    color: var(--azul);
+}
+
+.sobre-mi-texto p {
+    color: var(--gris);
+    margin-bottom: 18px;
+}
+
+.sobre-mi-texto .boton {
+    margin-top: 10px;
+    background-color: var(--azul);
+    color: var(--blanco);
+}
+
+.sobre-mi-texto .boton:hover {
+    background-color: #0048c9;
+}
+
+
+/* =========================
+   CONTACTO / CTA
+========================= */
+
+.cta {
+    background-color: var(--azul);
+    color: var(--blanco);
+    text-align: center;
+    padding: 85px 20px;
+}
+
+.cta .subtitulo {
+    color: var(--crema);
+}
+
+.cta h2 {
+    font-size: clamp(30px, 4vw, 48px);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.cta p {
     margin-bottom: 30px;
 }
 
 
-/* TÍTULOS */
+/* =========================
+   PIE DE PÁGINA
+========================= */
 
-.page-section h2 {
-    font-size: clamp(55px, 7vw, 100px);
-
-    line-height: 0.95;
-
-    letter-spacing: -4px;
-
-    margin-bottom: 35px;
+.footer {
+    background-color: var(--negro);
+    color: var(--blanco);
 }
 
-
-/* TEXTO */
-
-.page-section p:not(.small-title) {
-    max-width: 600px;
-
-    font-size: 20px;
-
-    line-height: 1.6;
+.footer-contenido {
+    padding: 55px 0;
 }
 
-
-/* ==================================================
-   PORTFOLIO
-================================================== */
-
-.portfolio-grid {
-    margin-top: 60px;
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 20px;
-}
-
-.portfolio-card {
-    min-height: 300px;
-
-    padding: 30px;
-
-    background: white;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: space-between;
-
-    border: 1px solid #e5dfd4;
-}
-
-.portfolio-card span {
+.footer-logo {
     color: var(--azul);
-
-    font-weight: 700;
+    font-size: 38px;
+    font-weight: 800;
 }
 
-.portfolio-card h3 {
-    font-size: 35px;
-
-    letter-spacing: -1px;
+.footer h4 {
+    margin-bottom: 15px;
 }
 
-
-/* ==================================================
-   CONTACTO
-================================================== */
-
-.contacto-section {
-    min-height: 80vh;
+.footer p {
+    color: #cccccc;
+    margin-bottom: 8px;
 }
 
-
-/* ==================================================
-   WHATSAPP
-================================================== */
-
-.whatsapp {
-    position: fixed;
-
-    right: 28px;
-    bottom: 25px;
-
-    width: 52px;
-    height: 52px;
-
-    border-radius: 50%;
-
-    background: #25D366;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    text-decoration: none;
-
-    z-index: 999;
-
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-
-    transition: 0.2s ease;
+.footer-link {
+    color: var(--crema);
+    font-weight: 600;
 }
 
-.whatsapp span {
-    color: white;
-
-    font-size: 22px;
+.footer-link:hover {
+    color: var(--azul);
 }
 
-.whatsapp:hover {
-    transform: scale(1.08);
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 13px;
 }
 
 
-/* ==================================================
-   RESPONSIVE / CELULAR
-================================================== */
+/* =========================
+   RESPONSIVE
+========================= */
 
-@media (max-width: 900px) {
-
-    .navbar {
-        height: 75px;
-
-        padding: 0 6%;
-    }
-
-    .logo {
-        font-size: 23px;
-    }
-
-    .nav-menu {
-        gap: 15px;
-    }
-
-    .nav-menu a {
-        font-size: 13px;
-    }
-
-    .nav-menu .contacto-btn {
-        padding: 10px 16px;
-    }
-
-
-    /* HERO */
+@media (max-width: 992px) {
 
     .hero {
-        flex-direction: column;
-
-        min-height: auto;
+        min-height: 580px;
     }
 
-    .hero-content {
-        width: 100%;
+    .hero h1 {
+        font-size: 58px;
+    }
 
-        min-height: 650px;
+}
 
-        padding: 130px 8% 70px;
+@media (max-width: 768px) {
 
+    .hero {
+        min-height: 550px;
+        text-align: center;
+    }
+
+    .hero-contenido {
+        margin: auto;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .botones {
         justify-content: center;
     }
 
-    .categoria {
-        font-size: 13px;
-
-        letter-spacing: 2px;
-
-        margin-bottom: 30px;
+    .seccion {
+        padding: 65px 0;
     }
 
-    .hero h1 {
-        font-size: clamp(60px, 16vw, 100px);
-
-        letter-spacing: -4px;
+    .titulo-seccion {
+        margin-bottom: 35px;
     }
 
-    .descripcion {
-        font-size: 17px;
-    }
-
-    .indicadores {
-        left: 8%;
-        bottom: 30px;
-    }
-
-
-    /* FOTO */
-
-    .hero-image {
-        width: 100%;
-
-        height: 100vw;
-
-        max-height: 650px;
-    }
-
-
-    /*
-    En celular el degradado
-    pasa de abajo hacia arriba.
-    */
-
-    .photo-gradient {
-        width: 100%;
-        height: 45%;
-
-        top: 0;
-        left: 0;
-
-        background: linear-gradient(
-            to bottom,
-
-            rgba(247, 242, 233, 1) 0%,
-
-            rgba(247, 242, 233, 0.75) 25%,
-
-            rgba(247, 242, 233, 0.25) 65%,
-
-            rgba(247, 242, 233, 0) 100%
-        );
-    }
-
-
-    /* SECCIONES */
-
-    .page-section {
-        padding: 100px 8%;
-    }
-
-    .portfolio-grid {
-        grid-template-columns: 1fr;
+    .sobre-mi-imagen {
+        min-height: 320px;
     }
 
 }
 
-
-/* ==================================================
-   CELULAR PEQUEÑO
-================================================== */
-
-@media (max-width: 600px) {
-
-    .nav-menu {
-        gap: 10px;
-    }
-
-    .nav-menu a:not(.contacto-btn) {
-        display: none;
-    }
+@media (max-width: 576px) {
 
     .logo {
-        font-size: 21px;
+        font-size: 29px;
     }
 
-    .hero-content {
-        min-height: 600px;
-
-        padding-top: 110px;
+    .hero {
+        min-height: 520px;
+        padding: 60px 0;
     }
 
     .hero h1 {
-        font-size: 65px;
-
-        line-height: 0.9;
+        font-size: 37px;
     }
 
-    .descripcion {
-        font-size: 16px;
+    .etiqueta {
+        font-size: 10px;
+        letter-spacing: 1px;
     }
 
-    .trabajo-btn {
-        font-size: 15px;
-
-        padding: 14px 22px;
+    .boton {
+        padding: 12px 20px;
+        font-size: 14px;
     }
 
-    .hero-image {
-        height: 110vw;
+    .presentacion h2 {
+        font-size: 30px;
+    }
+
+    .imagen-portfolio {
+        height: 250px;
+    }
+
+    .sobre-mi-imagen {
+        min-height: 280px;
     }
 
 }
