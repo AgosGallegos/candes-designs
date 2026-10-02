@@ -1,31 +1,458 @@
-<div class="preview-grid">
 
-    <div class="preview-card">
-        <img src="foto-1.jpg" alt="Trabajo fotográfico 1">
-    </div>
+<!DOCTYPE html>
+<html lang="es">
 
-    <div class="preview-card">
-        <img src="foto-2.jpg" alt="Trabajo fotográfico 2">
-    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div class="preview-card">
-        <img src="foto-3.jpg" alt="Trabajo fotográfico 3">
-    </div>
+    <title>Cande's Designs | Diseño y Fotografía</title>
 
-    <div class="preview-card">
-        <img src="foto-4.jpg" alt="Trabajo fotográfico 4">
-    </div>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <div class="preview-card">
-        <img src="foto-5.jpg" alt="Trabajo fotográfico 5">
-    </div>
+    <!-- Tipografía Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <div class="preview-card">
-        <img src="foto-6.jpg" alt="Trabajo fotográfico 6">
-    </div>
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <div class="preview-card">
-        <img src="foto-7.jpg" alt="Trabajo fotográfico 7">
-    </div>
+<body>
 
-</div>
+    <!-- ENCABEZADO -->
+    <header class="header">
+
+        <nav class="navbar navbar-expand-lg">
+
+            <div class="container">
+
+                <a href="index.html" class="navbar-brand logo">
+                    CSD<span>.</span>
+                </a>
+
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir menú">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link active">Inicio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#servicios" class="nav-link">Servicios</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#portfolio" class="nav-link">Portfolio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="institucional.html" class="nav-link">Sobre mí</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="contacto.html" class="nav-link">Contacto</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- PORTADA PRINCIPAL -->
+    <main>
+
+        <section class="hero">
+
+            <div class="container">
+
+                <div class="hero-contenido">
+
+                    <span class="etiqueta">
+                        DISEÑO · FOTOGRAFÍA · COMUNICACIÓN VISUAL
+                    </span>
+
+                    <h1>
+                        Ideas que se convierten en
+                        <span>historias visuales.</span>
+                    </h1>
+
+                    <p>
+                        Diseño, fotografía y contenido creativo para
+                        transmitir la esencia de cada marca, proyecto
+                        y momento.
+                    </p>
+
+                    <div class="botones">
+
+                        <a href="#portfolio" class="boton boton-principal">
+                            Ver mis trabajos
+                        </a>
+
+                        <a href="contacto.html" class="boton boton-secundario">
+                            Contactame
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PRESENTACIÓN -->
+        <section class="presentacion seccion">
+
+            <div class="container">
+
+                <div class="presentacion-contenido">
+
+                    <span class="subtitulo">BIENVENIDOS A CANDE'S DESIGNS</span>
+
+                    <h2>
+                        Cada idea tiene una identidad.
+                        <span>Mi trabajo es darle forma.</span>
+                    </h2>
+
+                    <p>
+                        Una marca personal que une diseño, fotografía
+                        y comunicación visual desde una mirada artística,
+                        sensible y narrativa.
+                    </p>
+
+                    <p>
+                        No se trata solamente de crear contenido,
+                        sino de capturar identidades, momentos y emociones
+                        a través de recursos visuales y audiovisuales.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SERVICIOS -->
+        <section class="servicios seccion" id="servicios">
+
+            <div class="container">
+
+                <div class="titulo-seccion">
+
+                    <span class="subtitulo">LO QUE HAGO</span>
+
+                    <h2>Servicios creativos</h2>
+
+                    <p>
+                        Ideas, imágenes y diseños que comunican
+                        y conectan con las personas.
+                    </p>
+
+                </div>
+
+
+                <div class="row g-4">
+
+                    <div class="col-12 col-md-6 col-lg-4">
+
+                        <article class="tarjeta-servicio h-100">
+
+                            <div class="icono-servicio">✦</div>
+
+                            <h3>Diseño gráfico</h3>
+
+                            <p>
+                                Creación de piezas visuales con identidad,
+                                estética y personalidad para marcas
+                                y emprendimientos.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+                    <div class="col-12 col-md-6 col-lg-4">
+
+                        <article class="tarjeta-servicio h-100">
+
+                            <div class="icono-servicio">◎</div>
+
+                            <h3>Fotografía</h3>
+
+                            <p>
+                                Captura de momentos, personas y espacios
+                                mediante una mirada espontánea,
+                                artística y documental.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+                    <div class="col-12 col-md-6 col-lg-4">
+
+                        <article class="tarjeta-servicio h-100">
+
+                            <div class="icono-servicio">▶</div>
+
+                            <h3>Contenido audiovisual</h3>
+
+                            <p>
+                                Creación de contenido visual y audiovisual
+                                para comunicar ideas, contar historias
+                                y conectar con el público.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PORTFOLIO -->
+        <section class="portfolio seccion" id="portfolio">
+
+            <div class="container">
+
+                <div class="titulo-seccion">
+
+                    <span class="subtitulo">MIS CREACIONES</span>
+
+                    <h2>Un poco de mi trabajo</h2>
+
+                    <p>
+                        Una selección de proyectos, fotografías
+                        y piezas visuales.
+                    </p>
+
+                </div>
+
+
+                <div class="row g-4">
+
+                    <div class="col-12 col-md-6 col-lg-4">
+
+                        <article class="tarjeta-portfolio">
+
+                            <div class="imagen-portfolio espacio-foto">
+                                <span>Fotografía 01</span>
+                            </div>
+
+                            <div class="portfolio-info">
+                                <h3>Fotografía</h3>
+                                <p>Momentos y miradas.</p>
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <div class="col-12 col-md-6 col-lg-4">
+
+                        <article class="tarjeta-portfolio">
+
+                            <div class="imagen-portfolio espacio-foto">
+                                <span>Diseño 02</span>
+                            </div>
+
+                            <div class="portfolio-info">
+                                <h3>Diseño visual</h3>
+                                <p>Identidad y creatividad.</p>
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <div class="col-12 col-md-6 col-lg-4">
+
+                        <article class="tarjeta-portfolio">
+
+                            <div class="imagen-portfolio espacio-foto">
+                                <span>Audiovisual 03</span>
+                            </div>
+
+                            <div class="portfolio-info">
+                                <h3>Contenido audiovisual</h3>
+                                <p>Historias en movimiento.</p>
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOBRE LA MARCA -->
+        <section class="sobre-mi seccion">
+
+            <div class="container">
+
+                <div class="row align-items-center g-5">
+
+                    <div class="col-12 col-md-6">
+
+                        <div class="sobre-mi-imagen espacio-foto">
+                            <span>Foto de Cande</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-12 col-md-6">
+
+                        <div class="sobre-mi-texto">
+
+                            <span class="subtitulo">UN POCO SOBRE MÍ</span>
+
+                            <h2>
+                                Detrás de cada creación,
+                                <span>hay una mirada.</span>
+                            </h2>
+
+                            <p>
+                                Soy Cande y me apasiona crear, observar
+                                y comunicar a través de imágenes y diseños.
+                            </p>
+
+                            <p>
+                                Busco que cada proyecto tenga una identidad
+                                propia, transmitiendo emociones e ideas
+                                de una manera auténtica y visual.
+                            </p>
+
+                            <a href="institucional.html" class="boton boton-principal">
+                                Conocé más
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACTO -->
+        <section class="cta">
+
+            <div class="container">
+
+                <span class="subtitulo">¿TENÉS UNA IDEA?</span>
+
+                <h2>Hagamos algo creativo juntos.</h2>
+
+                <p>
+                    Si tenés un proyecto, emprendimiento o propuesta,
+                    me encantaría conocerlo.
+                </p>
+
+                <a href="contacto.html" class="boton boton-blanco">
+                    Hablemos de tu proyecto
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+
+        <div class="container footer-contenido">
+
+            <div class="row g-4">
+
+                <div class="col-12 col-md-6">
+
+                    <h3 class="footer-logo">CSD.</h3>
+
+                    <p>
+                        Cande's Designs
+                    </p>
+
+                    <p>
+                        Diseño, fotografía y comunicación visual.
+                    </p>
+
+                </div>
+
+
+                <div class="col-12 col-md-6">
+
+                    <h4>Contacto</h4>
+
+                    <p>Paraná, Entre Ríos</p>
+
+                    <p>Instagram: @candesdesigns</p>
+
+                    <a href="contacto.html" class="footer-link">
+                        Escribime
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Cande's Designs. Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
