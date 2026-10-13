@@ -1272,3 +1272,30 @@ button {
 .boton-portfolio span {
   font-size: 18px;
 }
+
+.portfolio-boton-contenedor {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.boton-portfolio {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 24px;
+  background: #075efd;
+  color: #ffffff;
+  border-radius: 5px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.boton-portfolio:hover {
+  background: #0647c4;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
