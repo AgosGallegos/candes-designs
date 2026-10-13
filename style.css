@@ -1204,6 +1204,11 @@ button {
     width: 50px;
     height: 50px;
   }
+
+  .portfolio-boton-contenedor {
+    justify-content: flex-start;
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 380px) {
@@ -1230,53 +1235,15 @@ button {
     font-size: 9px;
   }
 }
-/* BOTÓN PARA VER EL PORTFOLIO COMPLETO */
+
+/* BOTÓN PARA VER TODAS LAS FOTOS EN DRIVE */
 
 .portfolio-boton-contenedor {
+  grid-column: 1 / -1;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  gap: 15px;
-  margin-top: 45px;
-  text-align: center;
-}
-
-.portfolio-boton-contenedor p {
-  color: #625e59;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.boton-portfolio {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 16px 25px;
-  background: #075efd;
-  color: #ffffff;
-  border: 1px solid #075efd;
-  border-radius: 5px;
-  font-family: "DM Sans", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-
-.boton-portfolio:hover {
-  background: #0647c4;
-  color: #ffffff;
-  transform: translateY(-3px);
-}
-
-.boton-portfolio span {
-  font-size: 18px;
-}
-
-.portfolio-boton-contenedor {
-  display: flex;
-  justify-content: center;
-  margin-top: 35px;
+  margin-top: 0;
 }
 
 .boton-portfolio {
@@ -1284,10 +1251,11 @@ button {
   align-items: center;
   gap: 15px;
   padding: 15px 24px;
-  background: #075efd;
-  color: #ffffff;
+  background: var(--azul);
+  color: var(--blanco);
+  border: 1px solid var(--azul);
   border-radius: 5px;
-  font-family: "DM Sans", sans-serif;
+  font-family: var(--fuente-texto);
   font-size: 14px;
   font-weight: 700;
   text-decoration: none;
@@ -1296,6 +1264,18 @@ button {
 
 .boton-portfolio:hover {
   background: #0647c4;
-  color: #ffffff;
+  border-color: #0647c4;
+  color: var(--blanco);
   transform: translateY(-3px);
+}
+
+.boton-portfolio span {
+  font-size: 18px;
+}
+
+@media (max-width: 700px) {
+  .portfolio-boton-contenedor {
+    justify-content: flex-start;
+    margin-top: 0;
+  }
 }
