@@ -1,3 +1,4 @@
+
 :root {
   --negro: #101010;
   --negro-suave: #191919;
@@ -255,7 +256,11 @@ button {
   border-radius: 6px;
   font-size: 14px;
   font-weight: 700;
-  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .boton:hover {
@@ -381,7 +386,7 @@ button {
   letter-spacing: 1.5px;
 }
 
-/* SECCIONES */
+/* SECCIONES GENERALES */
 
 .seccion {
   padding: 105px 7%;
@@ -589,7 +594,7 @@ button {
   color: var(--blanco);
 }
 
-/* PORTFOLIO */
+/* PORTFOLIO Y GALERÍA */
 
 .portfolio {
   background: var(--crema);
@@ -669,7 +674,23 @@ button {
   letter-spacing: 1.2px;
 }
 
-/* BOTÓN DE PORTFOLIO CENTRADO */
+.portfolio-pie {
+  margin-top: 60px;
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid rgba(16, 16, 16, 0.16);
+}
+
+.portfolio-pie > span {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+/* BOTÓN PARA VER TODAS LAS FOTOS */
 
 .portfolio-boton-contenedor {
   grid-column: 1 / -1;
@@ -681,12 +702,17 @@ button {
   text-align: center;
 }
 
+.portfolio-boton-contenedor p {
+  color: #625e59;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
 .boton-portfolio {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
-  max-width: 100%;
   padding: 16px 25px;
   background: var(--azul);
   color: var(--blanco);
@@ -695,12 +721,12 @@ button {
   font-family: var(--fuente-texto);
   font-size: 14px;
   font-weight: 700;
-  text-align: center;
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .boton-portfolio:hover {
   background: #0647c4;
+  border-color: #0647c4;
   color: var(--blanco);
   transform: translateY(-3px);
 }
@@ -709,7 +735,7 @@ button {
   font-size: 18px;
 }
 
-/* CONTACTO */
+/* CONTACTO ORIGINAL */
 
 .contacto {
   position: relative;
@@ -779,6 +805,57 @@ button {
   pointer-events: none;
 }
 
+/* NUEVA SECCIÓN FINAL: TEXTO LEGIBLE */
+
+.contacto-final {
+  position: relative;
+  padding: 90px 24px;
+  text-align: center;
+  background: #f5eee9;
+  color: #292421;
+}
+
+.contacto-contenido {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contacto-etiqueta {
+  color: #756158;
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-bottom: 16px;
+}
+
+.contacto-final h2 {
+  color: #292421;
+  font-size: clamp(30px, 5vw, 48px);
+  line-height: 1.15;
+  margin: 0 0 20px;
+}
+
+.contacto-final p {
+  color: #5f5651;
+  max-width: 570px;
+  margin: 0 auto 28px;
+  line-height: 1.8;
+}
+
+.contacto-final .boton-contacto {
+  display: inline-block;
+  padding: 15px 28px;
+  background: #292421;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.contacto-final .boton-contacto:hover {
+  background: #756158;
+  transform: translateY(-2px);
+}
+
 /* PIE DE PÁGINA */
 
 .footer {
@@ -825,32 +902,59 @@ button {
   font-size: 10px;
 }
 
+/* FOOTER DE LA SECCIÓN FINAL */
+
+.footer a {
+  transition: color 0.2s ease;
+}
+
+.footer > a:not(.footer-logo) {
+  color: #f1d9ca;
+}
+
+.footer > a:not(.footer-logo):hover {
+  color: #ffffff;
+}
+
+.footer small {
+  display: block;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
 /* BOTÓN FLOTANTE DE WHATSAPP */
 
-.whatsapp-flotante {
+.whatsapp-flotante,
+.whatsapp-float {
   position: fixed;
   right: 22px;
   bottom: 22px;
-  z-index: 100;
-  width: 55px;
-  height: 55px;
+  z-index: 9999;
+  width: 58px;
+  height: 58px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #20c86a;
+  background: #25d366;
+  color: #ffffff;
   box-shadow: 0 5px 24px rgba(0, 0, 0, 0.25);
-  transition: transform 0.2s ease;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.whatsapp-flotante:hover {
+.whatsapp-flotante:hover,
+.whatsapp-float:hover {
   transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
 }
 
-.whatsapp-flotante svg {
+.whatsapp-flotante svg,
+.whatsapp-float svg {
+  display: block;
   width: 31px;
   height: 31px;
-  fill: var(--blanco);
+  fill: currentColor;
 }
 
 /* TABLETS */
@@ -1170,10 +1274,17 @@ button {
     font-size: 8px;
   }
 
+  .portfolio-pie {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+    margin-top: 40px;
+  }
+
   .portfolio-boton-contenedor {
     grid-column: 1;
-    margin-top: 8px;
     justify-content: center;
+    margin-top: 8px;
   }
 
   .portfolio-boton-contenedor .boton-portfolio {
@@ -1194,14 +1305,14 @@ button {
 
   .contacto-contenido > p {
     max-width: 100%;
-    font-size: 14px;
   }
 
-  .contacto-fondo {
-    right: -5%;
-    bottom: -30px;
-    font-size: 180px;
-    letter-spacing: -12px;
+  .contacto-final {
+    padding: 65px 20px;
+  }
+
+  .contacto-final h2 {
+    font-size: clamp(30px, 8vw, 42px);
   }
 
   .footer {
@@ -1213,7 +1324,6 @@ button {
   .footer p {
     grid-column: 1 / -1;
     grid-row: 2;
-    font-size: 11px;
     line-height: 1.6;
   }
 
@@ -1228,11 +1338,18 @@ button {
     line-height: 1.6;
   }
 
-  .whatsapp-flotante {
+  .whatsapp-flotante,
+  .whatsapp-float {
     right: 14px;
     bottom: 14px;
-    width: 50px;
-    height: 50px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .whatsapp-flotante svg,
+  .whatsapp-float svg {
+    width: 29px;
+    height: 29px;
   }
 }
 
@@ -1260,34 +1377,3 @@ button {
     font-size: 9px;
   }
 }
-
-
-/* SECCIÓN FINAL DE CONTACTO */
-.contacto-final {
-  padding: 90px 24px;
-  text-align: center;
-  background: #f5eee9;
-  color: #292421;
-}
-
-.contacto-etiqueta {
-  color: #756158;
-  font-size: 12px;
-  letter-spacing: 3px;
-  margin-bottom: 16px;
-}
-
-.contacto-final h2 {
-  color: #292421;
-  font-size: clamp(30px, 5vw, 48px);
-  margin: 0 0 20px;
-}
-
-.contacto-final p:not(.contacto-etiqueta) {
-  color: #5f5651;
-  max-width: 570px;
-  margin: 0 auto 28px;
-  line-height: 1.8;
-}
-
-
