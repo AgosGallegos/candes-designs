@@ -1861,3 +1861,119 @@ img {
     margin-top: 5px;
   }
 }
+
+/* CORRECCIÓN DE DISTRIBUCIÓN - CONTACTO OPCIÓN 1 */
+
+.contacto-opcion-1 {
+  min-height: 0;
+  padding: 55px 7% 45px;
+  display: block;
+  background: #075efd;
+}
+
+.contacto-opcion-1 .contacto-contenido {
+  width: 100%;
+  max-width: 720px;
+  margin: 0;
+  display: block;
+}
+
+.contacto-opcion-1 .seccion-etiqueta {
+  margin-bottom: 18px;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.contacto-opcion-1 h2 {
+  max-width: 700px;
+  margin: 0 0 18px;
+  font-size: clamp(42px, 5vw, 66px);
+  line-height: 1.05;
+  letter-spacing: -2.5px;
+}
+
+.contacto-opcion-1 h2 br {
+  display: none;
+}
+
+.contacto-opcion-1 .contacto-contenido h2 span {
+  color: #101010;
+}
+
+.contacto-opcion-1 .contacto-contenido p {
+  width: 100%;
+  max-width: 540px;
+  margin: 0 0 22px;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.contacto-opcion-1 .boton-blanco {
+  width: fit-content;
+  min-height: 44px;
+  padding: 12px 20px;
+  display: inline-flex;
+  white-space: nowrap;
+}
+
+.contacto-opcion-1 .contacto-fondo {
+  right: 4%;
+  bottom: -65px;
+  font-size: clamp(130px, 19vw, 240px);
+  letter-spacing: -10px;
+}
+
+/* PIE NEGRO */
+
+.footer-opcion-1 {
+  padding: 22px 7% 16px;
+}
+
+.footer-opcion-1 .footer-superior {
+  grid-template-columns: auto 1fr auto;
+  gap: 28px;
+}
+
+.footer-opcion-1 .footer-inferior {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* CELULARES */
+
+@media (max-width: 700px) {
+  .contacto-opcion-1 {
+    padding: 55px 6% 45px;
+  }
+
+  .contacto-opcion-1 h2 {
+    font-size: clamp(38px, 9vw, 54px);
+    letter-spacing: -1.8px;
+  }
+
+  .contacto-opcion-1 h2 br {
+    display: none;
+  }
+
+  .contacto-opcion-1 .contacto-contenido p {
+    max-width: 100%;
+    font-size: 13px;
+  }
+
+  .contacto-opcion-1 .contacto-fondo {
+    right: -8%;
+    bottom: -20px;
+    font-size: 140px;
+  }
+
+  .footer-opcion-1 .footer-superior {
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+  }
+
+  .footer-opcion-1 .footer-inferior {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
