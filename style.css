@@ -120,3 +120,29 @@
     flex-direction: column;
   }
 }
+
+/* ÚNICO ICONO DE CONTACTO EN EL FOOTER */
+.footer-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.footer-whatsapp:hover {
+  background: #1da851;
+  transform: scale(1.08);
+}
+
+.footer-whatsapp svg {
+  display: block;
+  width: 25px;
+  height: 25px;
+  fill: currentColor;
+}
