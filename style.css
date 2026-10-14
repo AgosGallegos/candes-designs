@@ -25,7 +25,7 @@ body {
   background: var(--crema);
   color: var(--negro);
   font-family: var(--fuente-texto);
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 
 a {
@@ -33,13 +33,19 @@ a {
   text-decoration: none;
 }
 
-img {
+img,
+video {
   display: block;
   max-width: 100%;
 }
 
 button {
   font: inherit;
+  cursor: pointer;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 ::selection {
@@ -115,8 +121,7 @@ button {
   transition: width .2s ease;
 }
 
-.menu > a:hover::after,
-.menu > a.activo::after {
+.menu > a:hover::after {
   width: 100%;
 }
 
@@ -125,10 +130,6 @@ button {
   border-radius: 5px;
   background: var(--azul);
   color: var(--blanco);
-}
-
-.menu-contacto span {
-  margin-left: 8px;
 }
 
 .menu-toggle {
@@ -297,10 +298,6 @@ button {
   font-weight: 700;
 }
 
-.lateral-raya {
-  font-size: 20px;
-}
-
 .lateral-texto {
   font-size: 9px;
   letter-spacing: 1px;
@@ -338,25 +335,7 @@ button {
   background: var(--blanco);
 }
 
-.scroll-indicador > span:nth-child(2) {
-  font-size: 9px;
-  letter-spacing: 2px;
-}
-
-.scroll-flecha {
-  font-size: 17px;
-}
-
-.hero-coordenada {
-  position: absolute;
-  right: 5.6%;
-  bottom: 35px;
-  color: rgba(255,255,255,.65);
-  font-size: 8px;
-  letter-spacing: 1px;
-}
-
-/* SECCIONES GENERALES */
+/* SECCIONES */
 
 .seccion {
   padding: 100px 7%;
@@ -472,10 +451,6 @@ button {
   margin-bottom: 40px;
 }
 
-.seccion-encabezado .seccion-etiqueta {
-  margin-bottom: 18px;
-}
-
 .seccion-intro {
   max-width: 360px;
   color: #625e59;
@@ -557,10 +532,40 @@ button {
   color: var(--blanco);
 }
 
-/* PORTFOLIO */
+.centrar {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+/* PORTFOLIO Y FILTROS */
 
 .portfolio {
   background: var(--crema);
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 28px;
+}
+
+.filtro {
+  padding: 10px 17px;
+  border: 1px solid #d4cbc1;
+  border-radius: 30px;
+  background: transparent;
+  color: var(--negro);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.filtro.activo,
+.filtro:hover {
+  border-color: var(--azul);
+  background: var(--azul);
+  color: var(--blanco);
 }
 
 .portfolio-grid {
@@ -607,6 +612,7 @@ button {
   font-size: 11px;
   font-weight: 700;
   opacity: 0;
+  transition: opacity .2s ease;
 }
 
 .proyecto-foto:hover .proyecto-overlay,
@@ -635,52 +641,39 @@ button {
   letter-spacing: 1px;
 }
 
-.portfolio-pie {
-  margin-top: 50px;
-  padding-top: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 16px;
-  border-top: 1px solid rgba(16,16,16,.16);
+.portfolio-completo {
+  margin-bottom: 80px;
 }
 
-.portfolio-pie > span {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
+/* VIDEOS */
+
+.videos {
+  margin-top: 25px;
 }
 
-/* BOTÓN DRIVE DE LA GALERÍA */
-
-.portfolio-boton-contenedor {
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: center;
-  padding-top: 12px;
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
 }
 
-.boton-portfolio {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  max-width: 100%;
-  padding: 15px 22px;
-  border-radius: 5px;
-  background: var(--azul);
-  color: var(--blanco);
-  font-size: 14px;
-  font-weight: 700;
-  text-align: center;
+.video-card {
+  min-width: 0;
+  overflow: hidden;
+  background: var(--negro);
+}
+
+.video-card video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
 }
 
 /* CONTACTO */
 
 .contacto {
   position: relative;
-  min-height: 440px;
+  min-height: 420px;
   padding: 85px 7%;
   display: flex;
   align-items: center;
@@ -754,7 +747,7 @@ button {
 .footer {
   padding: 28px 7%;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr auto auto;
   align-items: center;
   gap: 18px;
   background: var(--negro);
@@ -787,6 +780,23 @@ button {
   color: #aaa;
   font-size: 10px;
   line-height: 1.6;
+}
+
+.footer-whatsapp {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #25d366;
+  color: white;
+}
+
+.footer-whatsapp svg {
+  width: 25px;
+  height: 25px;
+  fill: currentColor;
 }
 
 /* WHATSAPP FLOTANTE */
@@ -911,7 +921,6 @@ button {
     border: 1px solid rgba(255,255,255,.6);
     border-radius: 5px;
     background: rgba(0,0,0,.3);
-    cursor: pointer;
   }
 
   .menu-toggle span {
@@ -996,10 +1005,6 @@ button {
     letter-spacing: -1.8px;
   }
 
-  .hero h1 .salto-desktop {
-    display: none;
-  }
-
   .hero-descripcion {
     max-width: 100%;
     margin-bottom: 24px;
@@ -1014,20 +1019,19 @@ button {
 
   .boton {
     min-height: 48px;
-    padding: 13px 16px;
-    gap: 10px;
-    font-size: 13px;
+    padding: 13px 14px;
+    gap: 9px;
+    font-size: 12px;
   }
 
   .hero-firma {
     margin-top: 28px;
     gap: 12px;
-    font-size: 11px;
+    font-size: 10px;
     letter-spacing: .5px;
   }
 
-  .hero-lateral,
-  .hero-coordenada {
+  .hero-lateral {
     display: none;
   }
 
@@ -1064,7 +1068,6 @@ button {
 
   .sobre-franja {
     margin-top: 40px;
-    padding: 22px 0;
     align-items: flex-start;
     flex-direction: column;
     gap: 10px;
@@ -1080,9 +1083,8 @@ button {
   }
 
   .seccion-encabezado {
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
+    flex-direction: column;
     gap: 15px;
     margin-bottom: 28px;
   }
@@ -1144,21 +1146,13 @@ button {
     font-size: 8px;
   }
 
-  .portfolio-pie {
-    margin-top: 35px;
-    align-items: flex-start;
-    flex-direction: column;
+  .portfolio-completo {
+    margin-bottom: 55px;
   }
 
-  .portfolio-boton-contenedor {
-    grid-column: 1;
-    width: 100%;
-  }
-
-  .boton-portfolio {
-    width: 100%;
-    padding: 14px 12px;
-    font-size: 13px;
+  .videos-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
   }
 
   .contacto {
@@ -1193,15 +1187,10 @@ button {
     letter-spacing: -8px;
   }
 
-  .boton-blanco {
-    max-width: 100%;
-  }
-
   .footer {
     padding: 28px 6%;
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) auto;
     gap: 12px;
-    text-align: left;
   }
 
   .footer-logo {
@@ -1209,6 +1198,7 @@ button {
   }
 
   .footer p {
+    grid-column: 1 / -1;
     font-size: 12px;
   }
 
@@ -1218,8 +1208,12 @@ button {
     font-size: 10px;
   }
 
+  .footer-whatsapp {
+    justify-self: end;
+  }
+
   .footer-copy {
-    grid-column: 1;
+    grid-column: 1 / -1;
     margin-top: 8px;
     font-size: 10px;
   }
@@ -1236,8 +1230,6 @@ button {
     height: 27px;
   }
 }
-
-/* CELULARES MUY ANGOSTOS */
 
 @media (max-width: 380px) {
   .logo-principal {
