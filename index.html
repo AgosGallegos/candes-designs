@@ -351,31 +351,31 @@
       </div>
     </section>
 
+   
     <!-- CONTACTO -->
-    <section class="seccion contacto" id="contacto">
-      <div class="seccion-etiqueta">
-        <span class="punto-azul"></span>
-        HABLEMOS DE TU PROYECTO
-      </div>
+    <section class="contacto" id="contacto">
+      <div class="contacto-fondo">CSD*</div>
 
       <div class="contacto-contenido">
-        <div>
-          <h2>¿Creamos algo <span>juntos?</span></h2>
-
-          <p>
-            Si tenés una idea, un proyecto o querés conocer más
-            sobre mi trabajo, escribime. ¡Me encantaría saber de vos!
-          </p>
+        <div class="seccion-etiqueta etiqueta-blanca">
+          <span class="punto-blanco"></span>
+          HABLEMOS DE TU PROYECTO
         </div>
 
-        <!-- Reemplazar el enlace por el Instagram real de Cande -->
+        <h2>Tu próxima idea<br>empieza <span>acá.</span></h2>
+
+        <p>
+          Contame qué estás imaginando. Podemos convertir esa idea
+          en algo visual, auténtico y hecho para vos.
+        </p>
+
         <a
-          class="boton boton-azul"
-          href="https://www.instagram.com/"
+          class="boton boton-blanco"
+          href="https://wa.me/5493435201478"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Contactame <span>↗</span>
+          Escribime por WhatsApp <span>↗</span>
         </a>
       </div>
     </section>
@@ -384,43 +384,16 @@
 
   <!-- PIE DE PÁGINA -->
   <footer class="footer">
-    <a class="logo footer-logo" href="#inicio" aria-label="Volver al inicio">
-      <span class="logo-principal">CSD<span>*</span></span>
-      <span class="logo-secundario">CANDE'S<br>DESIGNS</span>
-    </a>
+    <a class="footer-logo" href="#inicio">CSD<span>*</span></a>
 
-    <p>Diseño, fotografía y creatividad.</p>
+    <p>Diseño, fotografía y contenido visual.</p>
 
-    <a href="#inicio" class="footer-volver">Volver arriba ↑</a>
+    <a class="footer-arriba" href="#inicio">VOLVER ARRIBA ↑</a>
 
-    <span class="footer-copyright">© Cande's Designs</span>
+    <span class="footer-copy">
+      © 2026 Cande's Designs. Hecho con creatividad.
+    </span>
   </footer>
-
-  <!-- MENÚ MÓVIL -->
-  <script>
-    const menuToggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("menu");
-
-    if (menuToggle && menu) {
-      menuToggle.addEventListener("click", () => {
-        const abierto = menu.classList.toggle("menu-abierto");
-
-        menuToggle.setAttribute("aria-expanded", String(abierto));
-        menuToggle.setAttribute(
-          "aria-label",
-          abierto ? "Cerrar menú" : "Abrir menú"
-        );
-      });
-
-      menu.querySelectorAll("a").forEach((enlace) => {
-        enlace.addEventListener("click", () => {
-          menu.classList.remove("menu-abierto");
-          menuToggle.setAttribute("aria-expanded", "false");
-          menuToggle.setAttribute("aria-label", "Abrir menú");
-        });
-      });
-    }
-  </script>
-
 </body>
 </html>
+
