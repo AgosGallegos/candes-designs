@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -21,10 +20,8 @@
       <span class="logo-secundario">CANDE'S<br>DESIGNS</span>
     </a>
 
-    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu" type="button">
+      <span></span><span></span><span></span>
     </button>
 
     <nav class="menu" id="menu">
@@ -32,12 +29,11 @@
       <a href="#sobre-mi">Sobre mí</a>
       <a href="#servicios">Servicios</a>
       <a href="#portfolio">Portfolio</a>
-      <a class="menu-contacto" href="#contacto">Contacto <span>↗</span></a>
+      <a class="menu-contacto" href="https://wa.me/5493435201478" target="_blank" rel="noopener noreferrer">Contacto <span>↗</span></a>
     </nav>
   </header>
 
   <main>
-    <!-- PORTADA -->
     <section class="hero" id="inicio">
       <img class="hero-foto" src="portada.jpg" alt="Fotografía de Cande con su cámara">
       <div class="hero-sombra"></div>
@@ -59,13 +55,8 @@
         </p>
 
         <div class="hero-botones">
-          <a class="boton boton-azul" href="#portfolio">
-            Ver mi trabajo <span>↗</span>
-          </a>
-
-          <a class="boton boton-transparente" href="#contacto">
-            Contactame <span>→</span>
-          </a>
+          <a class="boton boton-azul" href="#portfolio">Ver mi trabajo <span>↗</span></a>
+          <a class="boton boton-transparente" href="https://wa.me/5493435201478" target="_blank" rel="noopener noreferrer">Contactame <span>→</span></a>
         </div>
 
         <div class="hero-firma">
@@ -89,7 +80,6 @@
       <span class="hero-coordenada">CANDE'S DESIGNS — ESTUDIO CREATIVO</span>
     </section>
 
-    <!-- SOBRE MÍ -->
     <section class="seccion sobre-mi" id="sobre-mi">
       <div class="seccion-etiqueta">
         <span class="punto-azul"></span>
@@ -97,10 +87,7 @@
       </div>
 
       <div class="sobre-grid">
-        <h2>
-          Detrás de cada imagen,
-          <span>hay una historia.</span>
-        </h2>
+        <h2>Detrás de cada imagen, <span>hay una historia.</span></h2>
 
         <div class="sobre-texto">
           <p>
@@ -115,7 +102,7 @@
             a las que está dirigida.
           </p>
 
-          <a class="enlace-azul" href="#contacto">
+          <a class="enlace-azul" href="https://wa.me/5493435201478" target="_blank" rel="noopener noreferrer">
             Conoceme un poco más <span>↗</span>
           </a>
         </div>
@@ -127,7 +114,6 @@
       </div>
     </section>
 
-    <!-- SERVICIOS -->
     <section class="seccion servicios" id="servicios">
       <div class="seccion-encabezado">
         <div>
@@ -150,15 +136,9 @@
             <span>01 / 03</span>
             <span class="servicio-simbolo">✳</span>
           </div>
-
           <h3>Diseño gráfico</h3>
-
-          <p>
-            Piezas visuales creativas para comunicar tu identidad
-            y hacer que tu marca se destaque.
-          </p>
-
-          <a href="#contacto">Consultar <span>↗</span></a>
+          <p>Piezas visuales creativas para comunicar tu identidad y hacer que tu marca se destaque.</p>
+          <a href="https://wa.me/5493435201478" target="_blank" rel="noopener noreferrer">Consultar <span>↗</span></a>
         </article>
 
         <article class="servicio-card servicio-azul">
@@ -166,15 +146,9 @@
             <span>02 / 03</span>
             <span class="servicio-simbolo">◉</span>
           </div>
-
           <h3>Fotografía</h3>
-
-          <p>
-            Imágenes que capturan momentos, transmiten sensaciones
-            y cuentan historias reales.
-          </p>
-
-          <a href="#contacto">Consultar <span>↗</span></a>
+          <p>Imágenes que capturan momentos, transmiten sensaciones y cuentan historias reales.</p>
+          <a href="https://wa.me/5493435201478" target="_blank" rel="noopener noreferrer">Consultar <span>↗</span></a>
         </article>
 
         <article class="servicio-card">
@@ -182,32 +156,19 @@
             <span>03 / 03</span>
             <span class="servicio-simbolo">↗</span>
           </div>
-
           <h3>Contenido para redes</h3>
-
-          <p>
-            Contenido visual para redes sociales, pensado para
-            conectar con tu comunidad.
-          </p>
-
-          <a href="#contacto">Consultar <span>↗</span></a>
+          <p>Contenido visual para redes sociales, pensado para conectar con tu comunidad.</p>
+          <a href="https://wa.me/5493435201478" target="_blank" rel="noopener noreferrer">Consultar <span>↗</span></a>
         </article>
       </div>
 
-      <!-- BOTÓN AL PORTFOLIO COMPLETO -->
-      <div style="display: flex; justify-content: center; margin-top: 32px;">
-        <a
-          class="boton boton-azul"
-          href="https://drive.google.com/file/d/1Brp6eMHCFER69mzucBfLuoqs7ZtTFHFe/view?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      <div class="portfolio-boton-contenedor">
+        <a class="boton-portfolio" href="https://drive.google.com/file/d/1Brp6eMHCFER69mzucBfLuoqs7ZtTFHFe/view?usp=sharing" target="_blank" rel="noopener noreferrer">
           Ver portfolio completo <span>↗</span>
         </a>
       </div>
     </section>
 
-    <!-- PORTFOLIO -->
     <section class="seccion portfolio" id="portfolio">
       <div class="seccion-encabezado">
         <div>
@@ -215,7 +176,6 @@
             <span class="punto-azul"></span>
             UNA SELECCIÓN DE MIS TRABAJOS
           </div>
-
           <h2>Historias que <span>se ven.</span></h2>
         </div>
 
@@ -231,11 +191,7 @@
             <img src="foto-1.jpg" alt="Trabajo fotográfico número uno" loading="lazy">
             <span class="proyecto-overlay">Ver fotografía ↗</span>
           </a>
-
-          <div class="proyecto-datos">
-            <h3>Fotografía</h3>
-            <span>01 / IMAGEN</span>
-          </div>
+          <div class="proyecto-datos"><h3>Fotografía</h3><span>01 / IMAGEN</span></div>
         </article>
 
         <article class="proyecto">
@@ -243,11 +199,7 @@
             <img src="foto-2.jpg" alt="Trabajo fotográfico número dos" loading="lazy">
             <span class="proyecto-overlay">Ver fotografía ↗</span>
           </a>
-
-          <div class="proyecto-datos">
-            <h3>Momentos reales</h3>
-            <span>02 / FOTOGRAFÍA</span>
-          </div>
+          <div class="proyecto-datos"><h3>Momentos reales</h3><span>02 / FOTOGRAFÍA</span></div>
         </article>
 
         <article class="proyecto">
@@ -255,11 +207,7 @@
             <img src="foto-3.jpg" alt="Trabajo fotográfico número tres" loading="lazy">
             <span class="proyecto-overlay">Ver fotografía ↗</span>
           </a>
-
-          <div class="proyecto-datos">
-            <h3>Historias visuales</h3>
-            <span>03 / FOTOGRAFÍA</span>
-          </div>
+          <div class="proyecto-datos"><h3>Historias visuales</h3><span>03 / FOTOGRAFÍA</span></div>
         </article>
 
         <article class="proyecto">
@@ -267,11 +215,7 @@
             <img src="foto-4.jpg" alt="Trabajo fotográfico número cuatro" loading="lazy">
             <span class="proyecto-overlay">Ver fotografía ↗</span>
           </a>
-
-          <div class="proyecto-datos">
-            <h3>Detalles</h3>
-            <span>04 / IMAGEN</span>
-          </div>
+          <div class="proyecto-datos"><h3>Detalles</h3><span>04 / IMAGEN</span></div>
         </article>
 
         <article class="proyecto">
@@ -279,11 +223,7 @@
             <img src="foto-5.jpg" alt="Trabajo fotográfico número cinco" loading="lazy">
             <span class="proyecto-overlay">Ver fotografía ↗</span>
           </a>
-
-          <div class="proyecto-datos">
-            <h3>Creatividad</h3>
-            <span>05 / FOTOGRAFÍA</span>
-          </div>
+          <div class="proyecto-datos"><h3>Creatividad</h3><span>05 / FOTOGRAFÍA</span></div>
         </article>
 
         <article class="proyecto">
@@ -291,11 +231,7 @@
             <img src="foto-6.jpg" alt="Trabajo fotográfico número seis" loading="lazy">
             <span class="proyecto-overlay">Ver fotografía ↗</span>
           </a>
-
-          <div class="proyecto-datos">
-            <h3>Enfoques</h3>
-            <span>06 / IMAGEN</span>
-          </div>
+          <div class="proyecto-datos"><h3>Enfoques</h3><span>06 / IMAGEN</span></div>
         </article>
 
         <article class="proyecto">
@@ -303,20 +239,65 @@
             <img src="foto-7.jpg" alt="Trabajo fotográfico número siete" loading="lazy">
             <span class="proyecto-overlay">Ver fotografía ↗</span>
           </a>
-
-          <div class="proyecto-datos">
-            <h3>Inspiración</h3>
-            <span>07 / FOTOGRAFÍA</span>
-          </div>
+          <div class="proyecto-datos"><h3>Inspiración</h3><span>07 / FOTOGRAFÍA</span></div>
         </article>
 
-        <!-- BOTÓN AL DRIVE, AL FINAL DE LA GALERÍA -->
         <div class="portfolio-boton-contenedor">
-          <a
-            href="https://drive.google.com/drive/folders/10mteLxqmlpn50_aXnqpu1d6EoZiTX01B?usp=sharing"
-            class="boton-portfolio"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://drive.google.com/drive/folders/10mteLxqmlpn50_aXnqpu1d6EoZiTX01B?usp=sharing" class="boton-portfolio" target="_blank" rel="noopener noreferrer">
             Ver todas las fotos <span>↗</span>
           </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+      <div class="contacto-fondo">CSD*</div>
+      <div class="contacto-contenido">
+        <div class="seccion-etiqueta etiqueta-blanca">
+          <span class="punto-blanco"></span>
+          HABLEMOS DE TU PROYECTO
+        </div>
+        <h2>Tu próxima idea<br>empieza <span>acá.</span></h2>
+        <p>Contame qué estás imaginando. Podemos convertir esa idea en algo visual, auténtico y hecho para vos.</p>
+        <a class="boton boton-blanco" href="https://wa.me/5493435201478" target="_blank" rel="noopener noreferrer">
+          Escribime por WhatsApp <span>↗</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="footer-logo" href="#inicio">CSD<span>*</span></a>
+    <p>Diseño, fotografía y contenido visual.</p>
+    <a class="footer-arriba" href="#inicio">VOLVER ARRIBA ↑</a>
+    <span class="footer-copy">© 2026 Cande's Designs. Hecho con creatividad.</span>
+  </footer>
+
+  <a class="whatsapp-flotante" href="https://wa.me/5493435201478" target="_blank" rel="noopener noreferrer" aria-label="Escribime por WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M16 2.5A13.4 13.4 0 0 0 4.5 22.8L2.8 29l6.4-1.7A13.5 13.5 0 1 0 16 2.5zm0 24.5a11 11 0 0 1-5.6-1.5l-.4-.2-3.8 1 1-3.7-.3-.4A11 11 0 1 1 16 27zm6-8.2c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a9 9 0 0 1-2.7-1.7 10 10 0 0 1-1.9-2.4c-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.5s0-.4 0-.6l-1-2.5c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1.1 1.1-1.1 2.5 1.1 2.9 1.3 3.1 2.2 3.3 5.2 4.6c.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4s-.3-.3-.6-.4z"/>
+    </svg>
+  </a>
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    if (menuToggle && menu) {
+      menuToggle.addEventListener("click", () => {
+        const abierto = menu.classList.toggle("menu-abierto");
+        menuToggle.setAttribute("aria-expanded", String(abierto));
+        menuToggle.setAttribute("aria-label", abierto ? "Cerrar menú" : "Abrir menú");
+      });
+
+      menu.querySelectorAll("a").forEach((enlace) => {
+        enlace.addEventListener("click", () => {
+          menu.classList.remove("menu-abierto");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Abrir menú");
+        });
+      });
+    }
+  </script>
+</body>
+</html>
