@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,23 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#101010">
   <meta name="description" content="Cande's Designs: diseño gráfico, fotografía y contenido visual creativo.">
+
   <title>Cande's Designs | Diseño, fotografía y creatividad</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+  <!-- ENCABEZADO -->
   <header class="header">
     <a class="logo" href="#inicio" aria-label="Cande's Designs, inicio">
       <span class="logo-principal">CSD<span>*</span></span>
       <span class="logo-secundario">CANDE'S<br>DESIGNS</span>
     </a>
 
-    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+    <button
+      class="menu-toggle"
+      id="menu-toggle"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="menu"
+      type="button"
+    >
       <span></span>
       <span></span>
       <span></span>
@@ -32,14 +44,22 @@
       <a href="#sobre-mi">Sobre mí</a>
       <a href="#servicios">Servicios</a>
       <a href="#portfolio">Portfolio</a>
-      <a class="menu-contacto" href="#contacto">Contacto <span>↗</span></a>
+      <a class="menu-contacto" href="#contacto">
+        Contacto <span>↗</span>
+      </a>
     </nav>
   </header>
 
   <main>
+
     <!-- PORTADA -->
     <section class="hero" id="inicio">
-      <img class="hero-foto" src="portada.jpg" alt="Fotografía de Cande con su cámara">
+      <img
+        class="hero-foto"
+        src="portada.jpg"
+        alt="Fotografía de Cande con su cámara"
+      >
+
       <div class="hero-sombra"></div>
 
       <div class="hero-contenido">
@@ -86,7 +106,9 @@
         <span class="scroll-flecha">↓</span>
       </a>
 
-      <span class="hero-coordenada">CANDE'S DESIGNS — ESTUDIO CREATIVO</span>
+      <span class="hero-coordenada">
+        CANDE'S DESIGNS — ESTUDIO CREATIVO
+      </span>
     </section>
 
     <!-- SOBRE MÍ -->
@@ -135,6 +157,7 @@
             <span class="punto-azul"></span>
             QUÉ PUEDO HACER POR VOS
           </div>
+
           <h2>Ideas que toman <span>forma.</span></h2>
         </div>
 
@@ -145,6 +168,7 @@
       </div>
 
       <div class="servicios-grid">
+
         <article class="servicio-card">
           <div class="servicio-arriba">
             <span>01 / 03</span>
@@ -192,6 +216,7 @@
 
           <a href="#contacto">Consultar <span>↗</span></a>
         </article>
+
       </div>
 
       <!-- BOTÓN AL PORTFOLIO COMPLETO -->
@@ -226,6 +251,7 @@
       </div>
 
       <div class="portfolio-grid">
+
         <article class="proyecto proyecto-destacado">
           <a class="proyecto-foto" href="foto-1.jpg" target="_blank" rel="noopener">
             <img src="foto-1.jpg" alt="Trabajo fotográfico número uno" loading="lazy">
@@ -310,7 +336,7 @@
           </div>
         </article>
 
-        <!-- BOTÓN AL DRIVE, AL FINAL DE LA GALERÍA -->
+        <!-- BOTÓN AL DRIVE AL FINAL DE LA GALERÍA -->
         <div class="portfolio-boton-contenedor">
           <a
             href="https://drive.google.com/drive/folders/10mteLxqmlpn50_aXnqpu1d6EoZiTX01B?usp=sharing"
@@ -320,3 +346,81 @@
           >
             Ver todas las fotos <span>↗</span>
           </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="seccion contacto" id="contacto">
+      <div class="seccion-etiqueta">
+        <span class="punto-azul"></span>
+        HABLEMOS DE TU PROYECTO
+      </div>
+
+      <div class="contacto-contenido">
+        <div>
+          <h2>¿Creamos algo <span>juntos?</span></h2>
+
+          <p>
+            Si tenés una idea, un proyecto o querés conocer más
+            sobre mi trabajo, escribime. ¡Me encantaría saber de vos!
+          </p>
+        </div>
+
+        <!-- Reemplazar el enlace por el Instagram real de Cande -->
+        <a
+          class="boton boton-azul"
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Contactame <span>↗</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer">
+    <a class="logo footer-logo" href="#inicio" aria-label="Volver al inicio">
+      <span class="logo-principal">CSD<span>*</span></span>
+      <span class="logo-secundario">CANDE'S<br>DESIGNS</span>
+    </a>
+
+    <p>Diseño, fotografía y creatividad.</p>
+
+    <a href="#inicio" class="footer-volver">Volver arriba ↑</a>
+
+    <span class="footer-copyright">© Cande's Designs</span>
+  </footer>
+
+  <!-- MENÚ MÓVIL -->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    if (menuToggle && menu) {
+      menuToggle.addEventListener("click", () => {
+        const abierto = menu.classList.toggle("menu-abierto");
+
+        menuToggle.setAttribute("aria-expanded", String(abierto));
+        menuToggle.setAttribute(
+          "aria-label",
+          abierto ? "Cerrar menú" : "Abrir menú"
+        );
+      });
+
+      menu.querySelectorAll("a").forEach((enlace) => {
+        enlace.addEventListener("click", () => {
+          menu.classList.remove("menu-abierto");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Abrir menú");
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>
